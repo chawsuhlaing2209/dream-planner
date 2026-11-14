@@ -1,0 +1,19 @@
+.sum {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  font-size: 0.92rem;
+}
+.sum b {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  display: block;
+  line-height: 1.15;
+}
+.sum span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.warn {
+  color: var(--plan);
+}

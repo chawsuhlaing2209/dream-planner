@@ -1,0 +1,187 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.tablebox {
+  /* relative: keeps the visually hidden caption inside the scroll box */
+  position: relative;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+.grid {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.grid th {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 9px 8px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  background: var(--card);
+}
+.grid td {
+  padding: 3px 4px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+.grid tbody tr:last-child td {
+  border-bottom: 0;
+}
+.grid tfoot td {
+  font-weight: 700;
+  padding: 9px 8px;
+  border-top: 2px solid var(--line);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.grid .r {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.empty {
+  padding: 16px 12px !important;
+  color: var(--muted);
+}
+.in {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-input);
+  padding: 6px 7px;
+  width: 100%;
+  min-width: 92px;
+}
+.in:hover {
+  background: var(--field);
+}
+.in:focus {
+  background: var(--field);
+  border-color: var(--lamp);
+  outline: none;
+}
+.in:focus-visible {
+  outline: 2px solid var(--lamp);
+  outline-offset: 1px;
+}
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  min-width: 110px;
+}
+.wide {
+  min-width: 210px;
+}
+.narrow {
+  min-width: 64px;
+}
+select.in {
+  min-width: 130px;
+}
+.boxed {
+  border-color: var(--line);
+  background: var(--field);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.check {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--done);
+}
+.calc {
+  display: block;
+  padding: 6px 8px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.neg {
+  color: var(--plan);
+  font-weight: 700;
+}
+.x {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+.del {
+  font: inherit;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: var(--radius-input);
+  padding: 4px 9px;
+  font-size: 1rem;
+  min-width: 64px;
+}
+.del:hover {
+  background: var(--field);
+  color: var(--plan);
+}
+.armed,
+.armed:hover {
+  color: var(--card);
+  background: var(--plan);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--ink);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+.primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.addWrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.field {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.field label {
+  color: var(--muted);
+}
+.field .in {
+  width: auto;
+}
+.error {
+  font-size: 0.84rem;
+  color: var(--plan);
+  font-weight: 600;
+}

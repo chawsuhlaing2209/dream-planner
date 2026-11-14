@@ -1,0 +1,163 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+}
+.note {
+  font-size: 0.84rem;
+  color: var(--muted);
+  max-width: 75ch;
+}
+.cats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.cat > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  align-items: baseline;
+}
+.cat > summary::-webkit-details-marker {
+  display: none;
+}
+.catName {
+  font-weight: 700;
+}
+.catName::before {
+  content: "+";
+  display: inline-block;
+  width: 1.1em;
+  color: var(--muted);
+}
+.cat[open] .catName::before {
+  content: "–";
+}
+.catPct {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.catBar {
+  grid-column: 1 / -1;
+}
+.catMeta {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.catMeta .warn {
+  color: var(--plan);
+  font-weight: 700;
+}
+.inner {
+  padding: 0 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.cardHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.form .tick {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.formInput {
+  font: inherit;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: var(--field);
+  border-radius: var(--radius-input);
+  padding: 6px 7px;
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.formInput:focus {
+  border-color: var(--lamp);
+  outline: none;
+}
+.formInput:focus-visible {
+  outline: 2px solid var(--lamp);
+  outline-offset: 1px;
+}
+.formMsg {
+  font-size: 0.86rem;
+  min-height: 1.3em;
+}
+.ok {
+  color: var(--done);
+  font-weight: 600;
+}
+.bad {
+  color: var(--plan);
+  font-weight: 600;
+}
+.total {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.submit {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
