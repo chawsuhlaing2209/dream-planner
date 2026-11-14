@@ -1,0 +1,326 @@
+/* Board layout and pieces. Values follow reference/prototype.html and DESIGN.md. */
+.lede {
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.small {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Tiles */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+.tile {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.k {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.v {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.05;
+}
+.s {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.tileHome .v {
+  color: var(--lamp-ink);
+}
+.tileTrip .v {
+  color: var(--done);
+}
+
+/* House + rooms */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+.scene {
+  background: var(--night);
+  border-radius: 20px;
+  padding: 14px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.scene svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Caption sits on the fixed night background in both themes, so it uses fixed scene colours. */
+.cap {
+  color: #aab8de;
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 0 8px 6px;
+}
+.cap b {
+  color: #f5b450;
+}
+.rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.room {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  align-items: baseline;
+}
+.roomName {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.roomPct {
+  font-weight: 700;
+}
+.full {
+  grid-column: 1 / -1;
+}
+.roomLine {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Three small cards */
+.trio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.months {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 170px;
+  padding-top: 22px;
+}
+.month {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  height: 100%;
+  min-width: 0;
+}
+.month i {
+  display: block;
+  width: 100%;
+  background: var(--lamp);
+  border-radius: 6px 6px 2px 2px;
+  min-height: 2px;
+}
+.now i {
+  background: repeating-linear-gradient(135deg, var(--lamp) 0 6px, transparent 6px 10px);
+  border: 1.5px solid var(--lamp);
+}
+.month b {
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+.month span {
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.stack {
+  display: flex;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--line);
+}
+.stack i {
+  display: block;
+  height: 100%;
+}
+.stackA {
+  background: var(--ink);
+}
+.stackB {
+  background: var(--plan);
+}
+.kv {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  font-size: 0.93rem;
+  margin: 0;
+}
+.kv dt {
+  color: var(--muted);
+}
+.kv dd {
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.dotInk {
+  background: var(--ink);
+}
+.dotPlan {
+  background: var(--plan);
+}
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.fact {
+  display: flex;
+  flex-direction: column;
+}
+.fact b {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.fact span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Boarding passes */
+.tickets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+.ticket {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+.ticketMain {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.ticketMain ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ticketMain li {
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 2px 9px;
+  color: var(--muted);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.stub {
+  border-left: 2px dashed var(--line);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 128px;
+}
+.where {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cost {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+.pax {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Savings chart */
+.chartbox {
+  overflow-x: auto;
+}
+.chartbox svg {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.legend i {
+  display: inline-block;
+  width: 22px;
+  height: 0;
+  border-top: 3px solid var(--done);
+}
+.legend i.dash {
+  border-top-style: dashed;
+  border-top-color: var(--plan);
+}

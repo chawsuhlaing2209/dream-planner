@@ -1,0 +1,21 @@
+.stamp {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  padding: 5px 8px;
+  transform: rotate(-6deg);
+  text-align: center;
+}
+.done {
+  color: var(--done);
+}
+.plan {
+  color: var(--plan);
+}
+.none {
+  color: var(--muted);
+  border-style: dashed;
+}

@@ -1,0 +1,9 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.head p {
+  max-width: 62ch;
+  color: var(--muted);
+}

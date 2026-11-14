@@ -1,0 +1,13 @@
+.bar {
+  display: block;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--line);
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--lamp);
+  border-radius: var(--radius-pill);
+}
