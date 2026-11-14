@@ -1,0 +1,25 @@
+.wrap {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 26px var(--gutter) 64px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.lede {
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.empty {
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  color: var(--muted);
+}

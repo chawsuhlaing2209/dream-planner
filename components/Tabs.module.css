@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.93rem;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-bottom: 3px solid transparent;
+}
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--lamp);
+}

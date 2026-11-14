@@ -1,0 +1,143 @@
+{
+ "budget": {
+  "lines": 60,
+  "categories": 13,
+  "estimate": 293357752,
+  "paid": 229923577,
+  "left": 63434175,
+  "paidPercent": 78,
+  "byRoom": {
+   "plans": {
+    "estimate": 10994900,
+    "paid": 9982400
+   },
+   "labour": {
+    "estimate": 60194667,
+    "paid": 48298667
+   },
+   "structure": {
+    "estimate": 106591705,
+    "paid": 106027330
+   },
+   "roof": {
+    "estimate": 4500000,
+    "paid": 3000000
+   },
+   "doors": {
+    "estimate": 27661280,
+    "paid": 11640080
+   },
+   "finish": {
+    "estimate": 22969900,
+    "paid": 14788300
+   },
+   "living": {
+    "estimate": 10895000,
+    "paid": 2500000
+   },
+   "kitchen": {
+    "estimate": 16285800,
+    "paid": 7047400
+   },
+   "shrine": {
+    "estimate": 4300000,
+    "paid": 2642500
+   },
+   "garden": {
+    "estimate": 4000000,
+    "paid": 2895500
+   },
+   "smart": {
+    "estimate": 9933000,
+    "paid": 8573900
+   },
+   "bath": {
+    "estimate": 5031500,
+    "paid": 3431500
+   },
+   "reserve": {
+    "estimate": 10000000,
+    "paid": 9096000
+   }
+  }
+ },
+ "expenses": {
+  "2026-05": {
+   "rows": 51,
+   "total": 29296650
+  },
+  "2026-06": {
+   "rows": 51,
+   "total": 29296660
+  },
+  "2026-07": {
+   "rows": 55,
+   "total": 21839355
+  },
+  "2026-08": {
+   "rows": 72,
+   "total": 18764000
+  },
+  "2026-09": {
+   "rows": 55,
+   "total": 16456900
+  },
+  "2026-10": {
+   "rows": 69,
+   "total": 38399700
+  },
+  "2026-11": {
+   "rows": 42,
+   "total": 13574000
+  }
+ },
+ "loans": {
+  "rows": 8,
+  "total": 76050000
+ },
+ "materials": {
+  "rows": 73,
+  "totalCost": 207860635,
+  "paid": 175776501,
+  "cementBags": 950,
+  "bricks": 35000,
+  "rebarTons": 11.5
+ },
+ "labour": {
+  "months": 8,
+  "entries": 76,
+  "wagesAllMonths": 44678000,
+  "wagesPaid": 35732000,
+  "mealsPaid": 8693667
+ },
+ "trips": {
+  "phuket": 11329140,
+  "weeknd": 9548246,
+  "bali": 4398150,
+  "kawthaung": 13027472,
+  "eastjava": 7493635
+ },
+ "savings": {
+  "opening": 13000000,
+  "months": 38,
+  "runningTotal": {
+   "2025-06": 17970976,
+   "2026-02": 72407710,
+   "2026-10": 16322606,
+   "2026-11": 26690056,
+   "2027-01": 43660056,
+   "2028-07": 185570056
+  }
+ },
+ "holdings": {
+  "rows": 17,
+  "total": 19979210
+ },
+ "fxRates": {
+  "rows": 37
+ },
+ "loanMath": {
+  "stillToBorrow": 19774119,
+  "repayPerMonth": 4000000
+ }
+}

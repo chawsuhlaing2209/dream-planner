@@ -1,0 +1,40 @@
+/* Design tokens from docs/DESIGN.md section 2. Style everything through these. */
+:root {
+  --paper: #f2f5fa;
+  --card: #ffffff;
+  --ink: #17254a;
+  --muted: #5d6a8c;
+  --line: #d9e0ee;
+  --field: #f6f8fc;
+  --lamp: #f2a93b;
+  --lamp-ink: #8a5a06;
+  --done: #1f8a70;
+  --plan: #c24e77;
+  --night: #111c3a;
+
+  --display: var(--font-display), "Figtree", system-ui, sans-serif;
+  --body: var(--font-body), system-ui, -apple-system, "Segoe UI", "Noto Sans Myanmar", "Myanmar Text", sans-serif;
+
+  --content: 1120px;
+  --gutter: 20px;
+  --section-gap: 36px;
+  --radius-card: 16px;
+  --radius-pill: 99px;
+  --radius-input: 7px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #0c142b;
+    --card: #141f3f;
+    --ink: #eef2fb;
+    --muted: #9fadd0;
+    --line: #27355f;
+    --field: #1a2750;
+    --lamp: #f5b450;
+    --lamp-ink: #f5c877;
+    --done: #4cc3a5;
+    --plan: #ee86aa;
+  }
+}

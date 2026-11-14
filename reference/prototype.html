@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a board that draws itself from the tracker tabs beside it. The house is a night scene whose rooms light up as they are paid. */
+:root{
+  --paper:#F2F5FA; --card:#FFFFFF; --ink:#17254A; --muted:#5D6A8C; --line:#D9E0EE; --field:#F6F8FC;
+  --lamp:#F2A93B; --lamp-ink:#8A5A06; --done:#1F8A70; --plan:#C24E77;
+  --night:#111C3A;
+  --display:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI","Noto Sans Myanmar","Myanmar Text",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ color-scheme:dark;
+    --paper:#0C142B; --card:#141F3F; --ink:#EEF2FB; --muted:#9FADD0; --line:#27355F; --field:#1A2750;
+    --lamp:#F5B450; --lamp-ink:#F5C877; --done:#4CC3A5; --plan:#EE86AA; }
+}
+:root[data-theme="dark"]{ color-scheme:dark;
+  --paper:#0C142B; --card:#141F3F; --ink:#EEF2FB; --muted:#9FADD0; --line:#27355F; --field:#1A2750;
+  --lamp:#F5B450; --lamp-ink:#F5C877; --done:#4CC3A5; --plan:#EE86AA; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(1.9rem,4.6vw,2.8rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.4rem,3vw,1.85rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.05rem;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)} .small{font-size:.875rem} .num{font-variant-numeric:tabular-nums}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lamp);outline-offset:2px;border-radius:4px}
+
+.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top-in{max-width:1120px;margin:0 auto;padding:10px 20px 0;display:flex;flex-direction:column;gap:8px}
+.brand{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand b{font-family:var(--display);font-size:1.15rem}
+.chip{font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px 10px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.chip.live::before{background:var(--done)} .chip.busy::before{background:var(--lamp)} .chip.bad::before{background:var(--plan)}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--muted);padding:8px 12px;border-bottom:3px solid transparent}
+nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--lamp)}
+
+.wrap{max-width:1120px;margin:0 auto;padding:26px 20px 64px;display:flex;flex-direction:column;gap:36px}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+.sec-head p{max-width:62ch;color:var(--muted)}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:60ch;color:var(--muted);font-size:1.05rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.spread{justify-content:space-between}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.tile .k{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tile .v{font-family:var(--display);font-size:2rem;font-weight:700;line-height:1.05}
+.tile .s{font-size:.88rem;color:var(--muted)}
+.tile.home .v{color:var(--lamp-ink)} .tile.trip .v{color:var(--done)}
+
+.split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.scene{background:var(--night);border-radius:20px;padding:14px 12px 10px;display:flex;flex-direction:column;gap:6px}
+.scene svg{width:100%;height:auto;display:block}
+.scene .cap{color:#AAB8DE;font-size:.82rem;text-align:center;padding:0 8px 6px}
+.scene .cap b{color:#F5B450}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.rooms{display:flex;flex-direction:column;gap:11px}
+.room{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:baseline}
+.room .n{font-weight:600;font-size:.95rem}
+.room .p{font-weight:700;font-variant-numeric:tabular-nums}
+.bar{grid-column:1/-1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--lamp);border-radius:99px}
+.room .l{grid-column:1/-1;font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.months{display:flex;align-items:flex-end;gap:8px;height:170px;padding-top:22px}
+.months .m{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%;min-width:0}
+.months .m i{display:block;width:100%;background:var(--lamp);border-radius:6px 6px 2px 2px;min-height:2px}
+.months .m.now i{background:repeating-linear-gradient(135deg,var(--lamp) 0 6px,transparent 6px 10px);border:1.5px solid var(--lamp)}
+.months .m b{font-size:.74rem;font-weight:700;font-variant-numeric:tabular-nums}
+.months .m span{font-size:.74rem;color:var(--muted)}
+.stack{display:flex;height:22px;border-radius:99px;overflow:hidden;background:var(--line)}
+.stack i{display:block;height:100%} .stack .a{background:var(--ink)} .stack .b{background:var(--plan)}
+.kv{display:grid;grid-template-columns:1fr auto;gap:6px 14px;font-size:.93rem;margin:0}
+.kv dt{color:var(--muted)} .kv dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.fact{display:flex;flex-direction:column}
+.fact b{font-family:var(--display);font-size:1.5rem;line-height:1.1}
+.fact span{font-size:.82rem;color:var(--muted)}
+
+.tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.ticket{background:var(--card);border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:minmax(0,1fr) auto;overflow:hidden}
+.ticket .main{padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ticket .stub{border-left:2px dashed var(--line);padding:16px 12px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:10px;width:128px}
+.where{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cost{font-family:var(--display);font-size:1.4rem;font-weight:700;line-height:1.1;text-align:center}
+.ticket ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.ticket li{font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stamp{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:2px solid currentColor;border-radius:8px;padding:5px 8px;transform:rotate(-6deg);text-align:center}
+.stamp.done{color:var(--done)} .stamp.plan{color:var(--plan)} .stamp.none{color:var(--muted);border-style:dashed}
+.pax{font-size:.8rem;color:var(--muted);text-align:center}
+.chartbox{overflow-x:auto}
+.chartbox svg{display:block;width:100%;min-width:560px;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{display:inline-block;width:22px;height:0;border-top:3px solid var(--done)}
+.legend i.dash{border-top-style:dashed;border-top-color:var(--plan)}
+
+/* tracker */
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table.grid{border-collapse:collapse;width:100%;font-size:.9rem}
+.grid th{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--card)}
+.grid td{padding:3px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
+.grid tr:last-child td{border-bottom:0}
+.grid .r{text-align:right}
+.grid tfoot td{font-weight:700;padding:9px 8px;border-top:2px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+.in{font:inherit;color:inherit;background:transparent;border:1px solid transparent;border-radius:7px;padding:6px 7px;width:100%;min-width:92px}
+.in:hover:not(:disabled){background:var(--field)}
+.in:focus{background:var(--field);border-color:var(--lamp);outline:none}
+.in.num{text-align:right;font-variant-numeric:tabular-nums;min-width:110px}
+.in.wide{min-width:210px} .in.narrow{min-width:64px}
+select.in{min-width:130px}
+.in:disabled{opacity:1;-webkit-text-fill-color:currentColor}
+.calc{display:block;padding:6px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.calc.neg{color:var(--plan);font-weight:700}
+.grid .x{width:1%;white-space:nowrap;text-align:center}
+.del{font:inherit;border:0;background:transparent;color:var(--muted);cursor:pointer;border-radius:7px;padding:4px 9px;font-size:1rem}
+.del:hover{background:var(--field);color:var(--plan)} .del.armed{color:#fff;background:var(--plan);font-size:.78rem;font-weight:700}
+.btn{font:inherit;font-weight:600;font-size:.9rem;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font:inherit;font-size:.86rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:99px;padding:5px 12px;cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;align-items:end}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.form .in,.fieldrow .in{border-color:var(--line);background:var(--field);text-transform:none;letter-spacing:0;font-weight:500;font-size:.95rem}
+.form .tick{flex-direction:row;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:.9rem;font-weight:500}
+.fieldrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:.9rem}
+.fieldrow label{display:inline-flex;align-items:center;gap:8px;color:var(--muted)}
+.fieldrow .in{width:auto}
+details.cat{background:var(--card);border:1px solid var(--line);border-radius:14px}
+details.cat>summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+details.cat>summary::-webkit-details-marker{display:none}
+details.cat>summary .n{font-weight:700}
+details.cat>summary .n::before{content:"+";display:inline-block;width:1.1em;color:var(--muted)}
+details.cat[open]>summary .n::before{content:"–"}
+details.cat .inner{padding:0 12px 14px;display:flex;flex-direction:column;gap:10px}
+.sum{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:.92rem}
+.sum b{font-family:var(--display);font-size:1.3rem;display:block;line-height:1.15}
+.sum span{color:var(--muted);font-size:.8rem}
+.note{font-size:.84rem;color:var(--muted);max-width:75ch}
+footer{border-top:1px solid var(--line);padding-top:16px;font-size:.85rem;color:var(--muted);max-width:75ch}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in">
+  <div class="brand"><b>Dream Planner ♡</b><span class="chip" id="chip">Connecting</span></div>
+  <nav id="nav" aria-label="Sections"></nav>
+</div></div>
+<main class="wrap" id="view"></main>
+
+<script src="seed.js"></script>
+<script>
+(function(){
+'use strict';
+const SEED=window.DREAM_SEED||{};
+const COLS=['budget','expenses','loans','materials','labour','trips','savings','rates','assets','dp'];
+const clone=o=>JSON.parse(JSON.stringify(o));
+let S=clone(SEED); COLS.forEach(c=>{if(!S[c])S[c]={};});
+let db=null, canEdit=false, mode='connecting', modeMsg='', pendingWrites=0, needRender=false;
+const timers={}, chains={}, busy={};
+const ui={period:null, labPeriod:null, open:{}};
+
+/* ---------- helpers ---------- */
+function h(tag,attrs,...kids){
+  const e=document.createElement(tag);let val;
+  if(attrs)for(const k in attrs){const v=attrs[k];if(v==null||v===false)continue;
+    if(k==='class')e.className=v;else if(k==='value')val=v;else if(k==='checked')e.checked=!!v;
+    else if(k.slice(0,2)==='on')e.addEventListener(k.slice(2),v);else if(k==='style')e.style.cssText=v;
+    else e.setAttribute(k,v===true?'':v);}
+  for(const c of kids.flat(3)){if(c==null||c===false)continue;e.appendChild(typeof c==='object'?c:document.createTextNode(String(c)));}
+  if(val!==undefined)e.value=val;
+  return e;
+}
+const NS='http://www.w3.org/2000/svg';
+function sv(tag,attrs,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;return e;}
+const sum=(a,f)=>a.reduce((t,x)=>t+(+f(x)||0),0);
+const nf=v=>(v==null||v==='')?'':(Math.round(v*100)/100).toLocaleString('en-US');
+const K=v=>'K '+Math.round(v).toLocaleString('en-US');
+const M=v=>(v<0?'−':'')+'K '+(Math.abs(v)/1e6).toFixed(1)+'M';
+const SYM={MMK:'K ',THB:'฿',USD:'$',SGD:'S$'};
+const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const pShort=p=>MN[+p.slice(5,7)-1]||p;
+const pLong=p=>pShort(p)+' '+p.slice(0,4);
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
+const curPeriod=()=>today().slice(0,7);
+function nextPeriod(p){let y=+p.slice(0,4),m=+p.slice(5,7)+1;if(m>12){m=1;y++;}return y+'-'+String(m).padStart(2,'0');}
+const uid=p=>p+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+function niceMax(v){const steps=[1,2,2.5,5,10];const p=Math.pow(10,Math.floor(Math.log10(v||1)));for(const s of steps)if(s*p>=v)return s*p;return 10*p;}
+
+/* ---------- derived numbers ---------- */
+function cats(){
+  return Object.keys(S.budget).map(id=>{const c=S.budget[id],it=c.items||[];const est=sum(it,x=>x.est),paid=sum(it,x=>x.paid);
+    return {id,c,order:c.order||99,est,paid,left:est-paid,pct:est>0?Math.max(0,Math.min(1,paid/est)):0};}).sort((a,b)=>a.order-b.order);
+}
+function expenseMonths(){return Object.keys(S.expenses).sort().map(p=>({p,total:sum(S.expenses[p].items||[],x=>x.amount)}));}
+function loanItems(){return (S.loans.all&&S.loans.all.items)||[];}
+function settings(){return Object.assign({repayPerMonth:4000000,loanTargetMonth:'2027-01'},S.dp.settings||{});}
+function series(){
+  const d=S.savings.all||{opening:0,rows:[]};let run=+d.opening||0;
+  return (d.rows||[]).slice().sort((a,b)=>a.month<b.month?-1:1).map(r=>{
+    const net=(+r.cdg||0)+(+r.tf||0)+(+r.koko||0)-(+r.expense||0)-(+r.extraExp||0);run+=net+(+r.extra||0);
+    return {r,month:r.month,net,total:run,received:r.sCdg==='received'};});
+}
+function tripCalc(t){
+  const by={};let mmk=0;
+  (t.lines||[]).forEach(l=>{const v=(+l.price||0)*(+l.qty||0);by[l.cur]=(by[l.cur]||0)+v;mmk+=v*(l.cur==='MMK'?1:(+((t.rates||{})[l.cur])||0));});
+  return {by,mmk};
+}
+function lineMmk(t,l){return (+l.price||0)*(+l.qty||0)*(l.cur==='MMK'?1:(+((t.rates||{})[l.cur])||0));}
+function trips(){return Object.keys(S.trips).map(id=>({id,t:S.trips[id]})).sort((a,b)=>(a.t.order||99)-(b.t.order||99));}
+function loanMath(){
+  const cs=cats(),left=sum(cs,c=>c.left),st=settings(),ser=series();
+  const borrowed=sum(loanItems(),x=>x.amount);
+  const at=ser.filter(x=>x.month<=st.loanTargetMonth).pop();
+  const saved=at?at.total:0, more=Math.max(0,left-saved), total=borrowed+more;
+  return {left,borrowed,saved,more,total,months:st.repayPerMonth>0?total/st.repayPerMonth:0,st};
+}
+
+/* ---------- saving ---------- */
+function setChip(){
+  const c=document.getElementById('chip');let cls='chip',txt;
+  if(mode==='connecting'){txt=modeMsg||'Connecting';cls+=' busy';}
+  else if(mode==='import'){txt=modeMsg;cls+=' busy';}
+  else if(mode==='readonly'){txt=modeMsg||'Read-only snapshot';cls+=' bad';}
+  else if(mode==='error'){txt=modeMsg;cls+=' bad';}
+  else if(pendingWrites>0||Object.keys(timers).some(k=>timers[k])){txt='Saving';cls+=' busy';}
+  else{txt='Live · all changes saved';cls+=' live';}
+  c.className=cls;c.textContent=txt;
+}
+function save(col,id){
+  if(!canEdit||!db)return;
+  const k=col+'/'+id;busy[k]=(busy[k]||0);clearTimeout(timers[k]);
+  timers[k]=setTimeout(()=>{
+    timers[k]=null;const body=S[col][id]?clone(S[col][id]):null;busy[k]++;pendingWrites++;setChip();
+    chains[k]=(chains[k]||Promise.resolve()).then(()=>body?db.doc(k).set(body):db.doc(k).delete()).then(()=>{
+      busy[k]--;pendingWrites--;if(mode==='error')mode='live';setChip();
+    },e=>{
+      busy[k]--;pendingWrites--;
+      if(e&&e.code==='invalid_argument'){canEdit=false;mode='readonly';modeMsg='Read-only for you. Changes are not saved.';render();}
+      else{mode='error';modeMsg='Could not save. Edit the row again to retry.';}
+      setChip();
+    });
+  },500);
+  setChip();
+}
+function commit(col,id){
+  save(col,id);
+  setTimeout(()=>{const a=document.activeElement,key=a&&a.getAttribute&&a.getAttribute('data-key');render();
+    if(key){const n=document.querySelector('[data-key="'+key+'"]');if(n){n.focus();}}},0);
+}
+function isBusy(k){return !!timers[k]||(busy[k]||0)>0;}
+
+/* ---------- generic editable table ---------- */
+function delBtn(fn){
+  const b=h('button',{class:'del',type:'button','aria-label':'Delete row',title:'Delete row'},'×');let armed=false;
+  b.addEventListener('click',()=>{if(armed){fn();}else{armed=true;b.textContent='Delete?';b.classList.add('armed');
+    setTimeout(()=>{armed=false;b.textContent='×';b.classList.remove('armed');},3000);}});
+  return b;
+}
+function cell(o,row,c){
+  if(c.calc){const v=c.calc(row);return h('span',{class:'calc'+(c.flag&&v<0?' neg':'')},c.fmt?c.fmt(v):nf(v));}
+  const key=o.key+':'+row.id+':'+c.k,v=row[c.k];
+  const base={'data-key':key,id:'f-'+key.replace(/[^a-zA-Z0-9_-]/g,'_'),'aria-label':c.label,disabled:!canEdit};
+  if(c.type==='num'){
+    const i=h('input',Object.assign({},base,{class:'in num'+(c.narrow?' narrow':''),type:'text',inputmode:'decimal',value:nf(v)}));
+    i.addEventListener('focus',()=>{const cur=row[c.k];i.value=(cur||cur===0)?String(cur):'';i.select();});
+    i.addEventListener('blur',()=>{i.value=nf(row[c.k]);});
+    i.addEventListener('change',()=>{const n=parseFloat(i.value.replace(/[^0-9.\-]/g,''));o.edit(row,c.k,isNaN(n)?0:n);});
+    return i;
+  }
+  if(c.type==='select'){
+    const opts=(typeof c.options==='function'?c.options(row):c.options).slice();const cur=v==null?'':v;
+    if(!opts.includes(cur))opts.unshift(cur);
+    return h('select',Object.assign({},base,{class:'in',onchange:e=>o.edit(row,c.k,e.target.value),value:cur}),opts.map(x=>h('option',{value:x},x===''?'(none)':x)));
+  }
+  if(c.type==='check')return h('input',Object.assign({},base,{type:'checkbox',checked:!!v,onchange:e=>o.edit(row,c.k,e.target.checked)}));
+  return h('input',Object.assign({},base,{class:'in'+(c.wide?' wide':''),type:c.type==='date'?'date':'text',value:v==null?'':v,onchange:e=>o.edit(row,c.k,e.target.value)}));
+}
+function grid(o){
+  const showDel=o.del&&canEdit;
+  const right=c=>(c.type==='num'||c.right)?'r':'';
+  const head=h('tr',null,o.cols.map(c=>h('th',{class:right(c),scope:'col'},c.label)),showDel?h('th',{class:'x'},h('span',{style:'position:absolute;left:-9999px'},'Delete')):null);
+  const body=o.rows.map(row=>h('tr',null,o.cols.map(c=>h('td',{class:right(c)},cell(o,row,c))),showDel?h('td',{class:'x'},delBtn(()=>o.del(row))):null));
+  let foot=null;
+  if(o.cols.some(c=>c.sum)){
+    foot=h('tfoot',null,h('tr',null,o.cols.map((c,i)=>{
+      if(!c.sum)return h('td',null,i===0?'Total':'');
+      const t=sum(o.rows,r=>c.calc?c.calc(r):r[c.k]);return h('td',{class:'r'},c.fmt?c.fmt(t):nf(t));
+    }),showDel?h('td'):null));
+  }
+  if(!o.rows.length)body.push(h('tr',null,h('td',{colspan:o.cols.length+(showDel?1:0),class:'muted',style:'padding:14px 10px'},o.empty||'Nothing here yet.')));
+  return h('div',{class:'tablebox'},h('table',{class:'grid'},h('thead',null,head),h('tbody',null,body),foot));
+}
+const addBtn=(label,fn)=>canEdit?h('button',{class:'btn',type:'button',onclick:fn},label):null;
+function pills(list,cur,fn,label){return h('div',{class:'pills',role:'group','aria-label':label},list.map(x=>h('button',{class:'pill',type:'button','aria-pressed':String(x.id===cur),onclick:()=>fn(x.id)},x.label)));}
+function head(title,text){return h('div',{class:'sec-head'},h('h2',null,title),text?h('p',null,text):null);}
+function sumRow(parts){return h('div',{class:'sum'},parts.map(p=>h('div',null,h('b',{class:'num'},p[0]),h('span',null,p[1]))));}
+
+/* ---------- board ---------- */
+const ROOMS=[
+  {id:'reserve',x:150,y:50,w:90,h:40,one:true},{id:'smart',x:110,y:90,w:220,h:90},{id:'roof',x:330,y:140,w:240,h:40,one:true},
+  {id:'shrine',x:110,y:180,w:140,h:120},{id:'finish',x:250,y:180,w:170,h:120},{id:'doors',x:420,y:180,w:150,h:120},
+  {id:'kitchen',x:110,y:300,w:150,h:120},{id:'living',x:260,y:300,w:170,h:120},{id:'bath',x:430,y:300,w:140,h:120},
+  {id:'structure',x:110,y:420,w:460,h:36,one:true},{id:'labour',x:22,y:200,w:72,h:220},{id:'plans',x:22,y:120,w:72,h:62},{id:'garden',x:586,y:356,w:76,h:64}];
+function houseSvg(cs){
+  const svg=sv('svg',{viewBox:'0 0 680 500',role:'img','aria-label':'Cross-section of the house. Each room is filled with light up to the share paid for that budget category.'});
+  const defs=sv('defs',{}),g=sv('linearGradient',{id:'lamp',x1:0,y1:0,x2:0,y2:1});
+  g.appendChild(sv('stop',{offset:'0','stop-color':'#FFD27A'}));g.appendChild(sv('stop',{offset:'1','stop-color':'#F2A02B'}));defs.appendChild(g);svg.appendChild(defs);
+  [[40,40],[95,70],[300,30],[380,60],[455,28],[520,80],[610,45],[650,120],[250,80],[18,150],[600,200],[640,300]].forEach((s,i)=>svg.appendChild(sv('circle',{cx:s[0],cy:s[1],r:i%3?1.3:2,fill:'#C9D5F5',opacity:.8})));
+  svg.appendChild(sv('circle',{cx:585,cy:70,r:22,fill:'#F4E7C1'}));svg.appendChild(sv('circle',{cx:594,cy:64,r:20,fill:'#111C3A'}));
+  svg.appendChild(sv('rect',{x:0,y:456,width:680,height:44,fill:'#0B1329'}));svg.appendChild(sv('line',{x1:0,y1:456,x2:680,y2:456,stroke:'#3A4C82','stroke-width':2}));
+  const by={};cs.forEach(c=>{by[c.c.room]=c;});
+  ROOMS.forEach(r=>{
+    const c=by[r.id];if(!c)return;const fh=r.h*c.pct;
+    svg.appendChild(sv('rect',{x:r.x,y:r.y,width:r.w,height:r.h,fill:'#1D2C55'}));
+    svg.appendChild(sv('rect',{x:r.x,y:r.y+r.h-fh,width:r.w,height:fh,fill:'url(#lamp)'}));
+    svg.appendChild(sv('rect',{x:r.x,y:r.y,width:r.w,height:r.h,fill:'none',stroke:'#93A6DA','stroke-width':2.5}));
+    const cx=r.x+r.w/2,cy=r.y+r.h/2,pct=Math.round(c.pct*100)+'%',nm=c.c.short||c.c.name;
+    const t=(y,size,str)=>svg.appendChild(sv('text',{x:cx,y:y,'font-size':size,'text-anchor':'middle',fill:'#FFFFFF',stroke:'#0E1730','stroke-width':3.5,'paint-order':'stroke','stroke-linejoin':'round','font-family':'Figtree, system-ui, sans-serif','font-weight':700},str));
+    if(r.one)t(cy+5,14,nm+' '+pct);else{t(cy-4,r.w<100?12:13.5,nm);t(cy+20,r.w<100?19:23,pct);}
+  });
+  svg.appendChild(sv('polyline',{points:'100,90 340,90',fill:'none',stroke:'#93A6DA','stroke-width':5,'stroke-linecap':'round'}));
+  for(let x=345;x<=570;x+=25)svg.appendChild(sv('line',{x1:x,y1:118,x2:x,y2:140,stroke:'#93A6DA','stroke-width':1.5}));
+  svg.appendChild(sv('line',{x1:332,y1:118,x2:572,y2:118,stroke:'#93A6DA','stroke-width':2}));
+  return svg;
+}
+function chartSvg(ser){
+  const ch=sv('svg',{viewBox:'0 0 760 320',role:'img','aria-label':'Line chart of the savings total by month.'});
+  if(ser.length<2)return ch;
+  const L=56,R=704,T=24,B=270,YM=niceMax(Math.max.apply(null,ser.map(s=>s.total))*1.02),n=ser.length;
+  const X=i=>L+(R-L)*i/(n-1),Y=v=>B-(B-T)*Math.max(0,v)/YM,F='Figtree, sans-serif';
+  for(let i=0;i<=4;i++){const v=YM*i/4;ch.appendChild(sv('line',{x1:L,y1:Y(v),x2:R,y2:Y(v),stroke:'var(--line)','stroke-width':1}));
+    ch.appendChild(sv('text',{x:L-8,y:Y(v)+4,'text-anchor':'end','font-size':12,fill:'var(--muted)','font-family':F},v?(v/1e6)+'M':'0'));}
+  ser.forEach((s,i)=>{if(i===0||s.month.slice(5)==='01'){ch.appendChild(sv('line',{x1:X(i),y1:B,x2:X(i),y2:B+5,stroke:'var(--muted)','stroke-width':1}));
+    ch.appendChild(sv('text',{x:X(i),y:B+20,'text-anchor':i?'middle':'start','font-size':12,fill:'var(--muted)','font-family':F},pLong(s.month)));}});
+  const ex=Object.keys(S.expenses).sort(),a=ser.findIndex(s=>s.month===ex[0]),b=ser.findIndex(s=>s.month===ex[ex.length-1]);
+  if(a>=0&&b>a){ch.appendChild(sv('rect',{x:X(a),y:T,width:X(b)-X(a),height:B-T,fill:'var(--lamp)',opacity:.13}));
+    ch.appendChild(sv('text',{x:(X(a)+X(b))/2,y:T+14,'text-anchor':'middle','font-size':12,'font-weight':700,fill:'var(--lamp-ink)','font-family':F},'House build'));}
+  let last=-1;ser.forEach((s,i)=>{if(s.received)last=i;});if(last<0)last=0;
+  const path=(p,q)=>{let d='';for(let i=p;i<=q;i++)d+=(i===p?'M':'L')+X(i).toFixed(1)+' '+Y(ser[i].total).toFixed(1)+' ';return d;};
+  if(last>0){ch.appendChild(sv('path',{d:path(0,last)+'L'+X(last)+' '+B+' L'+X(0)+' '+B+' Z',fill:'var(--done)',opacity:.12}));
+    ch.appendChild(sv('path',{d:path(0,last),fill:'none',stroke:'var(--done)','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'}));}
+  if(last<n-1)ch.appendChild(sv('path',{d:path(last,n-1),fill:'none',stroke:'var(--plan)','stroke-width':3,'stroke-dasharray':'7 6','stroke-linecap':'round'}));
+  const mark=(i,anchor,dx,dy,color)=>{ch.appendChild(sv('circle',{cx:X(i),cy:Y(ser[i].total),r:5,fill:color,stroke:'var(--card)','stroke-width':2}));
+    ch.appendChild(sv('text',{x:X(i)+dx,y:Y(ser[i].total)+dy,'text-anchor':anchor,'font-size':12.5,'font-weight':700,fill:'var(--ink)','font-family':F},pLong(ser[i].month)+' · '+M(ser[i].total)));};
+  let peak=0;for(let i=0;i<=last;i++)if(ser[i].total>ser[peak].total)peak=i;
+  if(peak!==last&&peak>1)mark(peak,'middle',0,-12,'var(--done)');
+  mark(last,last>n*0.8?'end':'middle',6,22,'var(--done)');
+  if(last<n-1)mark(n-1,'end',-10,-10,'var(--plan)');
+  return ch;
+}
+function viewBoard(){
+  const cs=cats(),paid=sum(cs,c=>c.paid),left=sum(cs,c=>c.left),tot=paid+left,pct=tot>0?Math.round(paid/tot*100):0;
+  const tr=trips(),done=tr.filter(x=>x.t.status==='Completed').length,plan=tr.filter(x=>x.t.status==='Pending').length,none=tr.length-done-plan;
+  const ser=series(),cp=curPeriod(),now=ser.filter(s=>s.month<=cp).pop()||ser[ser.length-1],end=ser[ser.length-1];
+  const lm=loanMath(),em=expenseMonths(),mx=niceMax(Math.max.apply(null,em.map(e=>e.total).concat([1])));
+  const mats=(S.materials.all&&S.materials.all.items)||[];
+  const q=re=>sum(mats.filter(m=>re.test(m.name)),m=>m.qty);
+  const cem=mats.filter(m=>/crown|cement/i.test(m.name)&&m.date).sort((a,b)=>a.date<b.date?-1:1);
+  const days=sum(Object.keys(S.labour).filter(p=>p<=cp),p=>sum(S.labour[p].workers||[],w=>w.days));
+  const out=[];
+  out.push(h('header',{style:'display:flex;flex-direction:column;gap:10px'},h('span',{class:'eyebrow'},'Live board · '+new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})),
+    h('h1',null,'Three dreams on one board'),h('p',{class:'lede'},'A home being built, trips being collected, and savings climbing back. The board redraws from the tracker tabs every time you edit.')));
+  out.push(h('div',{class:'tiles'},
+    h('div',{class:'tile home'},h('span',{class:'k'},'Dream home'),h('span',{class:'v num'},pct+'% paid'),h('span',{class:'s num'},M(paid)+' paid · '+M(left)+' left')),
+    h('div',{class:'tile trip'},h('span',{class:'k'},'Dream trips'),h('span',{class:'v num'},done+' done'),h('span',{class:'s'},plan+' planned'+(none?' · '+none+' with no status':''))),
+    h('div',{class:'tile'},h('span',{class:'k'},'Savings tracker'),h('span',{class:'v num'},now?M(now.total):'K 0'),h('span',{class:'s num'},now?pLong(now.month)+' row'+(end&&end!==now?' · plan reaches '+M(end.total)+' by '+pLong(end.month):''):'No months yet'))));
+  out.push(h('section',null,head('The house lights up as it gets paid','Each budget category is a room. The lamp-light fills the room to the share already paid. A fully lit room is done.'),
+    h('div',{class:'split'},
+      h('div',{class:'scene'},houseSvg(cs),h('p',{class:'cap'},h('b',null,'Lit'),' = paid · dark = still to pay')),
+      h('div',{class:'card'},h('h3',null,'Room by room'),h('div',{class:'rooms'},cs.slice().sort((a,b)=>b.pct-a.pct).map(c=>h('div',{class:'room'},
+        h('span',{class:'n'},c.c.full||c.c.name),h('span',{class:'p'},Math.round(c.pct*100)+'%'),h('span',{class:'bar'},h('i',{style:'width:'+(c.pct*100).toFixed(1)+'%'})),h('span',{class:'l'},M(c.paid)+' paid · '+M(c.left)+' left')))))),
+    h('div',{class:'trio'},
+      h('div',{class:'card'},h('h3',null,'Build spending by month'),h('div',{class:'months'},em.map(e=>h('div',{class:'m'+(e.p===cp?' now':'')},h('b',null,(e.total/1e6).toFixed(1)),h('i',{style:'height:'+(e.total/mx*100).toFixed(1)+'%'}),h('span',null,pShort(e.p))))),
+        h('p',{class:'small muted'},'In K millions, from the Expenses tab. The striped bar is the month still running.')),
+      h('div',{class:'card'},h('h3',null,'The family loan'),h('div',{class:'stack','aria-hidden':'true'},h('i',{class:'a',style:'width:'+(lm.total?lm.borrowed/lm.total*100:0).toFixed(1)+'%'}),h('i',{class:'b',style:'width:'+(lm.total?lm.more/lm.total*100:0).toFixed(1)+'%'})),
+        h('dl',{class:'kv'},h('dt',null,h('span',{class:'dot',style:'background:var(--ink)'}),'Borrowed so far'),h('dd',null,M(lm.borrowed)),
+          h('dt',null,h('span',{class:'dot',style:'background:var(--plan)'}),'Still to borrow'),h('dd',null,M(lm.more)),h('dt',null,'Total loan'),h('dd',null,M(lm.total)),h('dt',null,'Time to repay'),h('dd',null,lm.months.toFixed(1)+' months')),
+        h('p',{class:'small muted'},'Still to borrow = left to pay on the house minus savings by '+pLong(lm.st.loanTargetMonth)+'. Repaying '+M(lm.st.repayPerMonth)+' a month.')),
+      h('div',{class:'card'},h('h3',null,'What went into the walls'),h('div',{class:'facts'},
+          h('div',{class:'fact'},h('b',{class:'num'},nf(q(/crown|cement/i))),h('span',null,'bags of cement')),h('div',{class:'fact'},h('b',{class:'num'},nf(q(/brick/i))),h('span',null,'bricks')),
+          h('div',{class:'fact'},h('b',{class:'num'},nf(q(/rebar/i))+' t'),h('span',null,'of rebar')),h('div',{class:'fact'},h('b',{class:'num'},nf(days)),h('span',null,'labour person-days logged'))),
+        cem.length>1?h('p',{class:'small muted'},'Cement went from '+K(cem[0].rate)+' a bag in '+pLong(cem[0].date)+' to '+K(cem[cem.length-1].rate)+' in '+pLong(cem[cem.length-1].date)+'.'):null))));
+  out.push(h('section',null,head('Trips, as boarding passes','Each trip is a ticket. The stamp is its status.'),h('div',{class:'tickets'},tr.map(x=>{
+    const t=x.t,c=tripCalc(t),cls=t.status==='Completed'?'done':t.status==='Pending'?'plan':'none';
+    const fx=Object.keys(c.by).filter(k=>k!=='MMK'&&c.by[k]>0).map(k=>SYM[k]+nf(c.by[k]));
+    const top=(t.lines||[]).slice().sort((a,b)=>lineMmk(t,b)-lineMmk(t,a)).slice(0,3);
+    return h('article',{class:'ticket'},h('div',{class:'main'},h('span',{class:'where'},t.place||''),h('h3',null,t.name||'Untitled trip'),h('ul',null,top.map(l=>h('li',null,l.name)))),
+      h('div',{class:'stub'},h('span',{class:'stamp '+cls},t.status==='Completed'?'Completed':t.status==='Pending'?'Planned':'No status'),h('div',null,h('div',{class:'cost num'},M(c.mmk)),fx.length?h('div',{class:'pax'},'incl. '+fx.join(' + ')):null),h('span',{class:'pax'},t.pax||'')));
+  }))));
+  out.push(h('section',null,head('The savings path','Like a reservoir: the house drew the water down, and the plan refills it month by month.'),
+    h('div',{class:'card'},h('div',{class:'chartbox'},chartSvg(ser)),h('div',{class:'legend'},h('span',null,h('i'),'Received months'),h('span',null,h('i',{class:'dash'}),'Pending and planned months')))));
+  return out;
+}
+
+/* ---------- home budget ---------- */
+function viewHome(){
+  const cs=cats(),est=sum(cs,c=>c.est),paid=sum(cs,c=>c.paid);
+  return [head('Home budget','One block per room of the board. Open a block to edit its lines. Left to pay is the estimate minus what is paid.'),
+    sumRow([[K(est),'Estimated total'],[K(paid),'Paid'],[K(est-paid),'Left to pay']]),
+    cs.map(c=>{
+      const d=h('details',{class:'cat',open:ui.open[c.id]?true:null},
+        h('summary',null,h('span',{class:'n'},c.c.name),h('span',{class:'num',style:'font-weight:700'},Math.round(c.pct*100)+'%'),h('span',{class:'bar'},h('i',{style:'width:'+(c.pct*100).toFixed(1)+'%'})),
+          h('span',{class:'small muted num',style:'grid-column:1/-1'},K(c.paid)+' paid · '+K(c.left)+' left · '+(c.c.items||[]).length+' lines')),
+        h('div',{class:'inner'},grid({key:'bud-'+c.id,rows:c.c.items||[],
+          cols:[{k:'name',label:'Line',wide:true},{k:'details',label:'Details',wide:true},{k:'est',label:'Estimate',type:'num',sum:true},{k:'paid',label:'Paid',type:'num',sum:true},
+            {label:'Left',calc:r=>(+r.est||0)-(+r.paid||0),right:true,sum:true,flag:true}],
+          edit:(r,k,v)=>{r[k]=v;commit('budget',c.id);},del:r=>{c.c.items=c.c.items.filter(x=>x!==r);commit('budget',c.id);}}),
+          h('div',{class:'row'},addBtn('Add a line',()=>{c.c.items=(c.c.items||[]).concat([{id:uid('b'),name:'',details:'',est:0,paid:0}]);ui.open[c.id]=true;commit('budget',c.id);}))));
+      d.addEventListener('toggle',()=>{ui.open[c.id]=d.open;});
+      return d;
+    }),
+    h('p',{class:'note'},'Expense rows point at these lines by name. If you rename a line, pick the new name on its expense rows too.')];
+}
+
+/* ---------- expenses + loan ---------- */
+function catOptions(){const o=[''];cats().forEach(c=>(c.c.items||[]).forEach(i=>{if(i.name&&!o.includes(i.name))o.push(i.name);}));return o;}
+function viewExpenses(){
+  const em=expenseMonths();if(!ui.period||!S.expenses[ui.period])ui.period=em.length?em[em.length-1].p:null;
+  const doc=ui.period?S.expenses[ui.period]:null,opts=catOptions(),lm=loanMath(),st=lm.st;
+  const out=[head('Expenses','Log what you spend on the build. Each month is its own list.')];
+  if(canEdit){
+    const f=h('form',{class:'card form',id:'quick'},
+      h('label',null,'Date',h('input',{class:'in',type:'date',id:'qa-date',required:true,value:today()})),
+      h('label',null,'Item',h('input',{class:'in',type:'text',id:'qa-item',required:true,placeholder:'e.g. Cement'})),
+      h('label',null,'Amount (K)',h('input',{class:'in num',type:'text',inputmode:'decimal',id:'qa-amount',required:true})),
+      h('label',null,'Budget line',h('select',{class:'in',id:'qa-cat'},opts.map(x=>h('option',{value:x},x===''?'(none)':x)))),
+      h('label',{class:'tick'},h('input',{type:'checkbox',id:'qa-budget',checked:true}),'Also add to Paid on that budget line'),
+      h('button',{class:'btn primary',type:'submit'},'Add expense'));
+    f.addEventListener('submit',e=>{e.preventDefault();
+      const date=document.getElementById('qa-date').value||today(),item=document.getElementById('qa-item').value.trim(),amount=parseFloat(document.getElementById('qa-amount').value.replace(/[^0-9.\-]/g,''))||0,cat=document.getElementById('qa-cat').value;
+      if(!item||!amount)return;const p=date.slice(0,7);
+      if(!S.expenses[p])S.expenses[p]={items:[]};S.expenses[p].items.push({id:uid('e'),date,item,amount,cat,checked:false});save('expenses',p);
+      if(cat&&document.getElementById('qa-budget').checked){for(const c of cats()){const it=(c.c.items||[]).find(i=>i.name===cat);if(it){it.paid=(+it.paid||0)+amount;save('budget',c.id);break;}}}
+      ui.period=p;render();const n=document.getElementById('qa-item');if(n)n.focus();});
+    out.push(f);
+  }
+  out.push(pills(em.map(e=>({id:e.p,label:pLong(e.p)+' · '+M(e.total)})),ui.period,p=>{ui.period=p;render();},'Month'));
+  if(doc)out.push(grid({key:'exp-'+ui.period,rows:doc.items||[],
+    cols:[{k:'date',label:'Date',type:'date'},{k:'item',label:'Item',wide:true},{k:'amount',label:'Amount',type:'num',sum:true},{k:'cat',label:'Budget line',type:'select',options:opts},{k:'checked',label:'Checked',type:'check'}],
+    edit:(r,k,v)=>{r[k]=v;commit('expenses',ui.period);},del:r=>{doc.items=doc.items.filter(x=>x!==r);commit('expenses',ui.period);}}));
+  out.push(h('p',{class:'note'},'Editing or deleting a past row does not change the Home budget. Only the Add expense form updates Paid for you.'));
+  out.push(h('section',null,head('Family loan','Money borrowed for the build.'),
+    sumRow([[K(lm.borrowed),'Borrowed so far'],[K(lm.more),'Still to borrow'],[lm.months.toFixed(1)+' months','To repay the total']]),
+    grid({key:'loan',rows:loanItems(),cols:[{k:'date',label:'Date',type:'date'},{k:'from',label:'From'},{k:'amount',label:'Amount',type:'num',sum:true},{k:'via',label:'Into'}],
+      edit:(r,k,v)=>{r[k]=v;commit('loans','all');},del:r=>{S.loans.all.items=loanItems().filter(x=>x!==r);commit('loans','all');}}),
+    h('div',{class:'row'},addBtn('Add a transfer',()=>{if(!S.loans.all)S.loans.all={items:[]};S.loans.all.items.push({id:uid('l'),date:today(),from:'',amount:0,via:''});commit('loans','all');})),
+    h('div',{class:'fieldrow'},
+      h('label',null,'Repay per month (K)',setIn('repayPerMonth',st.repayPerMonth,true)),
+      h('label',null,'Compare against savings in',setIn('loanTargetMonth',st.loanTargetMonth,false)))));
+  return out;
+}
+function setIn(k,v,isNum){
+  const i=h('input',{class:'in'+(isNum?' num':''),type:isNum?'text':'month',inputmode:isNum?'decimal':null,id:'set-'+k,'data-key':'set:'+k,disabled:!canEdit,value:isNum?nf(v):v});
+  i.addEventListener('change',()=>{const nv=isNum?(parseFloat(i.value.replace(/[^0-9.\-]/g,''))||0):i.value;if(!S.dp.settings)S.dp.settings={};S.dp.settings[k]=nv;commit('dp','settings');});
+  return i;
+}
+
+/* ---------- materials ---------- */
+function viewMaterials(){
+  const d=S.materials.all||(S.materials.all={items:[]}),rows=d.items||[];
+  return [head('Materials','Every purchase with its quantity and price. Left is the total minus what is paid.'),
+    sumRow([[K(sum(rows,r=>r.total)),'Total cost'],[K(sum(rows,r=>r.paid)),'Paid'],[K(sum(rows,r=>(+r.total||0)-(+r.paid||0))),'Left to pay']]),
+    h('div',{class:'row'},addBtn('Add a purchase',()=>{d.items=[{id:uid('m'),name:'',rate:0,unit:'',date:today(),qty:0,total:0,bought:0,paid:0,status:'Unpaid'}].concat(rows);commit('materials','all');})),
+    grid({key:'mat',rows:rows,cols:[{k:'name',label:'Material',wide:true},{k:'rate',label:'Price',type:'num'},{k:'unit',label:'Unit'},{k:'date',label:'Date',type:'date'},{k:'qty',label:'Qty needed',type:'num',narrow:true},
+        {k:'bought',label:'Qty bought',type:'num',narrow:true},{k:'total',label:'Total cost',type:'num',sum:true},{k:'paid',label:'Paid',type:'num',sum:true},{label:'Left',calc:r=>(+r.total||0)-(+r.paid||0),right:true,sum:true,flag:true},
+        {k:'status',label:'Status',type:'select',options:['Done','In Progress','Unpaid']}],
+      edit:(r,k,v)=>{r[k]=v;if(k==='rate'||k==='qty'){r.total=Math.round((+r.rate||0)*(+r.qty||0));}commit('materials','all');},
+      del:r=>{d.items=d.items.filter(x=>x!==r);commit('materials','all');}}),
+    h('p',{class:'note'},'Changing Price or Qty needed recalculates Total cost. Type over Total cost when a discount applies.')];
+}
+
+/* ---------- labour ---------- */
+function viewLabour(){
+  const ps=Object.keys(S.labour).sort(),cp=curPeriod();
+  if(!ui.labPeriod||!S.labour[ui.labPeriod])ui.labPeriod=ps.includes(cp)?cp:ps[ps.length-1];
+  const p=ui.labPeriod,d=p?S.labour[p]:null,ws=d?(d.workers||[]):[];
+  const all=[];ps.forEach(x=>(S.labour[x].workers||[]).forEach(w=>all.push(w)));
+  const out=[head('Labour','Days worked, daily rate and what has been paid, month by month.'),
+    sumRow([[K(sum(all,w=>w.days*w.rate)),'Wages, all months'],[K(sum(all,w=>w.paid)),'Wages paid'],[K(sum(ps,x=>S.labour[x].meals)),'Meals paid']]),
+    h('div',{class:'row'},pills(ps.map(x=>({id:x,label:pLong(x)})),p,x=>{ui.labPeriod=x;render();},'Month'),
+      addBtn('Start next month',()=>{const np=nextPeriod(ps[ps.length-1]||cp);const prev=S.labour[ps[ps.length-1]];
+        S.labour[np]={label:pLong(np),meals:0,workers:(prev?prev.workers:[]).map(w=>({id:uid('w'),name:w.name,days:0,rate:w.rate,paid:0,meal:w.meal}))};ui.labPeriod=np;commit('labour',np);}))];
+  if(d){out.push(grid({key:'lab-'+p,rows:ws,cols:[{k:'name',label:'Name'},{k:'days',label:'Days',type:'num',narrow:true,sum:true},{k:'rate',label:'Daily rate',type:'num'},{label:'Wage',calc:r=>(+r.days||0)*(+r.rate||0),right:true,sum:true},
+        {k:'paid',label:'Paid',type:'num',sum:true},{label:'Due',calc:r=>(+r.days||0)*(+r.rate||0)-(+r.paid||0),right:true,sum:true,flag:false},{k:'meal',label:'Meal allowance',type:'num',sum:true}],
+      edit:(r,k,v)=>{r[k]=v;commit('labour',p);},del:r=>{d.workers=d.workers.filter(x=>x!==r);commit('labour',p);}}));
+    out.push(h('div',{class:'row'},addBtn('Add a worker',()=>{d.workers=ws.concat([{id:uid('w'),name:'',days:0,rate:0,paid:0,meal:0}]);commit('labour',p);})));
+    const mi=h('input',{class:'in num',type:'text',inputmode:'decimal',id:'lab-meals','data-key':'labmeals:'+p,disabled:!canEdit,value:nf(d.meals)});
+    mi.addEventListener('change',()=>{d.meals=parseFloat(mi.value.replace(/[^0-9.\-]/g,''))||0;commit('labour',p);});
+    out.push(h('div',{class:'fieldrow'},h('label',null,'Meals paid in '+pLong(p)+' (K)',mi)));}
+  return out;
+}
+
+/* ---------- trips ---------- */
+function viewTrips(){
+  const tr=trips();
+  const out=[head('Trips','One card per trip. Lines can be in kyat, baht, US or Singapore dollars. Set the rate and the kyat total follows.'),
+    h('div',{class:'row'},addBtn('Add a trip',()=>{const id=uid('trip');S.trips[id]={order:(tr.length?Math.max.apply(null,tr.map(x=>x.t.order||0)):0)+1,name:'New trip',place:'',status:'Pending',pax:'',rates:{},lines:[]};commit('trips',id);}))];
+  tr.forEach(x=>{
+    const t=x.t,id=x.id,c=tripCalc(t),used=Object.keys(c.by).filter(k=>k!=='MMK');
+    const fld=(k,label,type,options)=>{const base={class:'in',id:'trip-'+id+'-'+k,'data-key':'trip:'+id+':'+k,disabled:!canEdit,'aria-label':label};
+      const el=type==='select'?h('select',Object.assign(base,{value:t[k]||''}),options.map(o=>h('option',{value:o},o===''?'(none)':o))):h('input',Object.assign(base,{type:'text',value:t[k]||''}));
+      el.addEventListener('change',()=>{t[k]=el.value;commit('trips',id);});return h('label',null,label,el);};
+    out.push(h('div',{class:'card'},
+      h('div',{class:'form'},fld('name','Trip'),fld('place','Where'),fld('pax','Who'),fld('status','Status','select',['','Pending','Completed'])),
+      grid({key:'trip-'+id,rows:t.lines||[],empty:'No cost lines yet.',cols:[{k:'name',label:'Line',wide:true},{k:'cur',label:'Currency',type:'select',options:['MMK','THB','USD','SGD']},{k:'price',label:'Price',type:'num'},{k:'qty',label:'Qty',type:'num',narrow:true},
+          {label:'Total',calc:r=>(+r.price||0)*(+r.qty||0),right:true,fmt:v=>nf(v)},{label:'In kyat',calc:r=>lineMmk(t,r),right:true,sum:true,fmt:v=>nf(Math.round(v))}],
+        edit:(r,k,v)=>{r[k]=v;commit('trips',id);},del:r=>{t.lines=t.lines.filter(l=>l!==r);commit('trips',id);}}),
+      h('div',{class:'fieldrow'},used.map(k=>{const i=h('input',{class:'in num narrow',type:'text',inputmode:'decimal',id:'rate-'+id+'-'+k,'data-key':'rate:'+id+':'+k,disabled:!canEdit,value:nf((t.rates||{})[k])});
+          i.addEventListener('change',()=>{if(!t.rates)t.rates={};t.rates[k]=parseFloat(i.value.replace(/[^0-9.\-]/g,''))||0;commit('trips',id);});return h('label',null,'K per 1 '+k,i);}),
+        h('span',{class:'num',style:'font-weight:700'},'Trip total '+K(c.mmk))),
+      h('div',{class:'row spread'},addBtn('Add a line',()=>{t.lines=(t.lines||[]).concat([{id:uid('t'),name:'',cur:'MMK',price:0,qty:1}]);commit('trips',id);}),
+        canEdit?h('span',{class:'row small muted'},'Remove this trip',delBtn(()=>{delete S.trips[id];commit('trips',id);})):null)));
+  });
+  return out;
+}
+
+/* ---------- savings ---------- */
+function viewSavings(){
+  const d=S.savings.all||(S.savings.all={opening:0,rows:[]}),ser=series(),by={};ser.forEach(s=>{by[s.r.id]=s;});
+  const st=['received','pending'],assets=(S.assets.all&&S.assets.all.items)||[],rates=(S.rates.all&&S.rates.all.rows)||[];
+  const oi=h('input',{class:'in num',type:'text',inputmode:'decimal',id:'sav-open','data-key':'sav:opening',disabled:!canEdit,value:nf(d.opening)});
+  oi.addEventListener('change',()=>{d.opening=parseFloat(oi.value.replace(/[^0-9.\-]/g,''))||0;commit('savings','all');});
+  return [head('Savings','Each month: income in, living costs and extra spending out. The running total carries forward.'),
+    h('div',{class:'card'},h('div',{class:'chartbox'},chartSvg(ser)),h('div',{class:'legend'},h('span',null,h('i'),'Received months'),h('span',null,h('i',{class:'dash'}),'Pending and planned months'))),
+    h('div',{class:'fieldrow'},h('label',null,'Starting balance before the first month (K)',oi)),
+    grid({key:'sav',rows:ser.map(s=>s.r),cols:[{label:'Month',calc:r=>r.month,fmt:v=>pLong(v)},{k:'cdg',label:'CDG salary',type:'num'},{k:'tf',label:'TF / Class',type:'num'},{k:'koko',label:"KoKo's saving",type:'num'},
+        {k:'expense',label:'Expense',type:'num'},{k:'extraExp',label:'Extra expense',type:'num'},{k:'extra',label:'Extra in',type:'num'},
+        {label:'Net saving',calc:r=>by[r.id].net,right:true,flag:true},{label:'Total',calc:r=>by[r.id].total,right:true,flag:true},
+        {k:'sCdg',label:'CDG',type:'select',options:st},{k:'sTf',label:'Class',type:'select',options:st},{k:'sKoko',label:'KoKo',type:'select',options:st},{k:'sInt',label:'Interest',type:'select',options:st}],
+      edit:(r,k,v)=>{r[k]=v;commit('savings','all');},del:r=>{d.rows=d.rows.filter(x=>x!==r);commit('savings','all');}}),
+    h('div',{class:'row'},addBtn('Add the next month',()=>{const last=ser[ser.length-1];const lr=last?last.r:{};
+      d.rows=(d.rows||[]).concat([{id:uid('s'),month:last?nextPeriod(last.month):curPeriod(),cdg:lr.cdg||0,tf:0,koko:lr.koko||0,expense:lr.expense||0,extraExp:0,extra:0,sCdg:'pending',sTf:'pending',sKoko:'pending',sInt:'pending'}]);commit('savings','all');})),
+    h('section',null,head('What I hold now','Where the money sits today.'),
+      grid({key:'ast',rows:assets,cols:[{k:'name',label:'Place',wide:true},{k:'amount',label:'Amount',type:'num',sum:true}],edit:(r,k,v)=>{r[k]=v;commit('assets','all');},del:r=>{S.assets.all.items=assets.filter(x=>x!==r);commit('assets','all');}}),
+      h('div',{class:'row'},addBtn('Add a place',()=>{if(!S.assets.all)S.assets.all={items:[]};S.assets.all.items.push({id:uid('a'),name:'',amount:0});commit('assets','all');}))),
+    h('section',null,head('Exchange rates','Your monthly rate notes from the Rates tab.'),
+      grid({key:'rate',rows:rates,cols:[{label:'Month',calc:r=>r.month,fmt:v=>pLong(v)},{k:'sgd',label:'SGD to MMK',type:'num'},{k:'thb',label:'THB to MMK',type:'num'},{k:'thbPerSgd',label:'THB per SGD',type:'num'}],
+        edit:(r,k,v)=>{r[k]=v;commit('rates','all');},del:r=>{S.rates.all.rows=rates.filter(x=>x!==r);commit('rates','all');}}),
+      h('div',{class:'row'},addBtn('Add the next month',()=>{const l=rates[rates.length-1]||{};if(!S.rates.all)S.rates.all={rows:[]};S.rates.all.rows.push({id:uid('r'),month:l.month?nextPeriod(l.month):curPeriod(),sgd:l.sgd||0,thb:l.thb||0,thbPerSgd:l.thbPerSgd||0});commit('rates','all');})))];
+}
+
+/* ---------- shell ---------- */
+const TABS=[['board','Board',viewBoard],['home','Home budget',viewHome],['expenses','Expenses',viewExpenses],['materials','Materials',viewMaterials],['labour','Labour',viewLabour],['trips','Trips',viewTrips],['savings','Savings',viewSavings]];
+function route(){const k=(location.hash||'').replace('#','');return TABS.find(t=>t[0]===k)||TABS[0];}
+let lastTab=null;
+function render(){
+  needRender=false;const tab=route(),view=document.getElementById('view'),nav=document.getElementById('nav');
+  nav.replaceChildren(...TABS.map(t=>h('a',{href:'#'+t[0],'aria-current':t===tab?'page':null},t[1])));
+  const y=window.scrollY;let kids;
+  try{kids=tab[2]();}catch(e){kids=[h('p',{class:'muted'},'This view could not be drawn: '+e.message)];}
+  view.replaceChildren(...[].concat(kids).flat(3).filter(Boolean));
+  if(tab[0]!=='board'&&mode==='readonly')view.prepend(h('p',{class:'note'},'You are looking at a read-only copy, so the fields are locked.'));
+  if(lastTab===tab[0])window.scrollTo(0,y);else window.scrollTo(0,0);lastTab=tab[0];
+  setChip();
+}
+function requestRender(){const a=document.activeElement;if(a&&a.closest&&a.closest('#view')&&/^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)){needRender=true;return;}render();}
+document.addEventListener('focusout',()=>{if(needRender)setTimeout(()=>{if(needRender)requestRender();},50);});
+window.addEventListener('hashchange',render);
+
+/* ---------- storage ---------- */
+function readOnly(msg){canEdit=false;mode='readonly';modeMsg=msg||'Read-only snapshot of 14 Nov 2026';render();}
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function importSeed(){
+  const list=[];COLS.forEach(c=>Object.keys(SEED[c]||{}).forEach(id=>list.push([c,id])));
+  for(let i=0;i<list.length;i++){
+    mode='import';modeMsg='Setting up your data '+(i+1)+' of '+list.length;setChip();
+    const k=list[i][0]+'/'+list[i][1];
+    for(let tries=0;;tries++){
+      try{await db.doc(k).set(clone(SEED[list[i][0]][list[i][1]]));break;}
+      catch(e){if(e&&(e.code==='resource_exhausted'||e.code==='unavailable')&&tries<4){await wait(2000);continue;}throw e;}
+    }
+    await wait(120);
+  }
+  await db.doc('dp/meta').set({seeded:true,at:new Date().toISOString(),source:'Dream Planner sheet, 14 Nov 2026'});
+}
+function subscribe(){
+  let first=COLS.length;const seen={};
+  COLS.forEach(col=>{
+    db.collection(col).onSnapshot(snap=>{
+      if(snap.empty&&snap.metadata&&snap.metadata.fromCache)return;
+      let changed=false;const ids={};
+      snap.docs.forEach(d=>{ids[d.id]=1;const k=col+'/'+d.id;if(isBusy(k))return;const body=d.data();if(!body)return;
+        if(JSON.stringify(S[col][d.id])!==JSON.stringify(body)){S[col][d.id]=clone(body);changed=true;}});
+      if(!(snap.metadata&&snap.metadata.fromCache))Object.keys(S[col]).forEach(id=>{if(!ids[id]&&!isBusy(col+'/'+id)){delete S[col][id];changed=true;}});
+      if(!seen[col]){seen[col]=1;first--;if(first===0){clearTimeout(loadTimer);if(mode==='connecting'||mode==='import')mode='live';changed=true;}}
+      if(changed)requestRender();else setChip();
+    },e=>{if(e&&e.code==='revoked'){readOnly('Access changed. Read-only for now.');}else{mode='error';modeMsg='Live updates stopped. Reopen the page to reconnect.';setChip();}});
+  });
+}
+render();
+const loadTimer=setTimeout(()=>{if(mode==='connecting'){modeMsg='Still connecting. Showing the 14 Nov 2026 snapshot.';setChip();}},10000);
+(async function(){
+  try{
+    if(!window.claude||typeof window.claude.use!=='function'){clearTimeout(loadTimer);readOnly();return;}
+    db=await window.claude.use('db');
+    if(!db){clearTimeout(loadTimer);readOnly();return;}
+    const meta=await db.doc('dp/meta').get();
+    if(!meta.exists)await importSeed();
+    canEdit=true;mode='connecting';modeMsg='Loading your data';render();subscribe();
+  }catch(e){clearTimeout(loadTimer);readOnly();}
+})();
+})();
+</script>
+</body>
+</html>

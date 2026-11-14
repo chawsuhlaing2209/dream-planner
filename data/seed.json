@@ -1,0 +1,6551 @@
+{
+ "budget": {
+  "plans": {
+   "order": 1,
+   "name": "Architecture & Structural Design",
+   "room": "plans",
+   "short": "Plans",
+   "full": "Design, permits and legal",
+   "items": [
+    {
+     "id": "b0001",
+     "name": "1. Architecture Plan",
+     "details": "Family/friend design support + consultant backup",
+     "est": 1869900,
+     "paid": 1869900
+    },
+    {
+     "id": "b0002",
+     "name": "2. Structural Design",
+     "details": "Structural & electrical layout support",
+     "est": 700000,
+     "paid": 700000
+    },
+    {
+     "id": "b0003",
+     "name": "3. Interior Design",
+     "details": "Interior Design",
+     "est": 2025000,
+     "paid": 1012500
+    },
+    {
+     "id": "b0004",
+     "name": "4. Soil Testing",
+     "details": "To determine foundation type",
+     "est": 2700000,
+     "paid": 2700000
+    },
+    {
+     "id": "b0005",
+     "name": "5. Title Transfer & Ownership Documentation",
+     "details": "Title Transfer & Ownership Documentation",
+     "est": 700000,
+     "paid": 700000
+    },
+    {
+     "id": "b0006",
+     "name": "6. Municipal Permits, Utility Approvals & Setup",
+     "details": "Municipal Permits, Utility Approvals & Setup",
+     "est": 3000000,
+     "paid": 3000000
+    }
+   ]
+  },
+  "labour": {
+   "order": 2,
+   "name": "Labour",
+   "room": "labour",
+   "short": "Labour",
+   "full": "Labour",
+   "items": [
+    {
+     "id": "b0007",
+     "name": "Labour (May 2026)",
+     "details": "Labour cost including slab crew + Excavation Worker",
+     "est": 8197667,
+     "paid": 8197667
+    },
+    {
+     "id": "b0008",
+     "name": "Labour (June 2026)",
+     "details": "Labour cost including slab crew",
+     "est": 8039000,
+     "paid": 8039000
+    },
+    {
+     "id": "b0009",
+     "name": "Labour (July 2026)",
+     "details": "Labour cost including slab crew",
+     "est": 8392000,
+     "paid": 8392000
+    },
+    {
+     "id": "b0010",
+     "name": "Labour (August 2026)",
+     "details": "Labour cost (no extras)",
+     "est": 8409000,
+     "paid": 8409000
+    },
+    {
+     "id": "b0011",
+     "name": "Labour (September 2026)",
+     "details": "Labour cost",
+     "est": 7280000,
+     "paid": 7280000
+    },
+    {
+     "id": "b0012",
+     "name": "Labour (October 2026)",
+     "details": "Labour cost",
+     "est": 7161000,
+     "paid": 6801000
+    },
+    {
+     "id": "b0013",
+     "name": "Labour (November 2026)",
+     "details": "",
+     "est": 4999000,
+     "paid": 1180000
+    },
+    {
+     "id": "b0014",
+     "name": "Labour (December 2026)",
+     "details": "",
+     "est": 7717000,
+     "paid": 0
+    }
+   ]
+  },
+  "structure": {
+   "order": 3,
+   "name": "Structural Construction",
+   "room": "structure",
+   "short": "Structure",
+   "full": "Structural construction",
+   "items": [
+    {
+     "id": "b0015",
+     "name": "Structural Materials (April 2026)",
+     "details": "Initial structural material purchases for foundation and ground beams",
+     "est": 44350000,
+     "paid": 44350000,
+     "link": "Note: Sand 30600 discount"
+    },
+    {
+     "id": "b0016",
+     "name": "Structural Materials (May 2026)",
+     "details": "Materials for ground floor slab cycle",
+     "est": 18507150,
+     "paid": 18507150
+    },
+    {
+     "id": "b0017",
+     "name": "Structural Materials (June 2026)",
+     "details": "Materials for first floor slab and first half of brick purchase",
+     "est": 18884125,
+     "paid": 18884125
+    },
+    {
+     "id": "b0018",
+     "name": "Structural Materials (July 2026)",
+     "details": "Materials for roof slab and final brick purchase",
+     "est": 14946055,
+     "paid": 14946055
+    },
+    {
+     "id": "b0019",
+     "name": "Structural Materials (August 2026)",
+     "details": "Materials for roof slab and final brick purchase",
+     "est": 6499375,
+     "paid": 5935000
+    },
+    {
+     "id": "b0020",
+     "name": "Structural Materials (Oct 2026)",
+     "details": "",
+     "est": 3405000,
+     "paid": 3405000
+    }
+   ]
+  },
+  "roof": {
+   "order": 4,
+   "name": "Roof Garden",
+   "room": "roof",
+   "short": "Roof garden",
+   "full": "Roof garden and handrails",
+   "items": [
+    {
+     "id": "b0021",
+     "name": "2. Rooftop Garden Setup",
+     "details": "Waterproof decking, grass mat, potted plants, lighting",
+     "est": 1500000,
+     "paid": 0
+    },
+    {
+     "id": "b0022",
+     "name": "4. Roof Handrails",
+     "details": "Roof handrails",
+     "est": 3000000,
+     "paid": 3000000
+    }
+   ]
+  },
+  "doors": {
+   "order": 5,
+   "name": "Doors, Windows & Glass Walls",
+   "room": "doors",
+   "short": "Doors & glass",
+   "full": "Doors, windows and glass",
+   "items": [
+    {
+     "id": "b0023",
+     "name": "MainDoors & Internal/BackDoors",
+     "details": "Tempered glass panels for kitchen area (10*11) (Sheet estimate K 9,435,620; set to paid + left to pay.)",
+     "est": 10384370,
+     "paid": 5100080
+    },
+    {
+     "id": "b0024",
+     "name": "Glass railing for verandah",
+     "details": "12mm clear temper",
+     "est": 5536560,
+     "paid": 0
+    },
+    {
+     "id": "b0025",
+     "name": "Aluminium Windows",
+     "details": "Aluminium Frame slide doors (7 glass windows)",
+     "est": 11740350,
+     "paid": 6540000
+    }
+   ]
+  },
+  "finish": {
+   "order": 6,
+   "name": "Exterior & Interior Finishing",
+   "room": "finish",
+   "short": "Finishing",
+   "full": "Paint, floors, tiles, ceiling",
+   "items": [
+    {
+     "id": "b0026",
+     "name": "Interior & exterior paint",
+     "details": "Weather-resistant external, interior emulsion paint",
+     "est": 6087000,
+     "paid": 6087000
+    },
+    {
+     "id": "b0027",
+     "name": "SPC Floor",
+     "details": "Ceramic/wood-like tiles (living, beds, kitchen, bath)",
+     "est": 6400000,
+     "paid": 0
+    },
+    {
+     "id": "b0028",
+     "name": "Bathroom and WC wall tiles",
+     "details": "master bath room (main)= 126 tiles\nmaster bath room (noah)= 53 tiles\nguest bath room= 81 tiles\ncommon bath room = 60 tiles\ncommon wc = 26 tiles",
+     "est": 1937600,
+     "paid": 1120000
+    },
+    {
+     "id": "b0029",
+     "name": "Main Bathroom accent wall tiles",
+     "details": "- bathroom accent 65x265mm 3 x 9 ft = 146 tiles = 146*0.73=$106.58\n- bathroom accent 65x265mm 4 x 7 ft= 151 tiles = 151*0.73=$110.23",
+     "est": 921900,
+     "paid": 921900
+    },
+    {
+     "id": "b0030",
+     "name": "Ground Floor Tiles",
+     "details": "ground floor living+dining+kitchen+stair L area =96 tiles * 18300\nground floor foyer = 12 tiles * 18300\nall bathrooms = 50 tiles *15800",
+     "est": 2526400,
+     "paid": 2526400
+    },
+    {
+     "id": "b0031",
+     "name": "Stair",
+     "details": "32 tiles for each step",
+     "est": 1252000,
+     "paid": 0
+    },
+    {
+     "id": "b0032",
+     "name": "Ceiling & Partition",
+     "details": "Gypsum, false ceiling, acoustic insulation",
+     "est": 3845000,
+     "paid": 4133000
+    }
+   ]
+  },
+  "living": {
+   "order": 7,
+   "name": "Furniture & Appliances",
+   "room": "living",
+   "short": "Furniture",
+   "full": "Furniture and curtains",
+   "items": [
+    {
+     "id": "b0033",
+     "name": "1. Sofa Set + Coffee Table",
+     "details": "High-end cozy sectional sofa & solid wood table for living room",
+     "est": 3000000,
+     "paid": 0
+    },
+    {
+     "id": "b0034",
+     "name": "2. Pillows",
+     "details": "2 king-size movement-proof, 1 single mattress",
+     "est": 500000,
+     "paid": 0
+    },
+    {
+     "id": "b0035",
+     "name": "3. Curtains",
+     "details": "2x W1, 7x W2, 3x W3",
+     "est": 2895000,
+     "paid": 0
+    },
+    {
+     "id": "b0036",
+     "name": "4. Custom Furnitures",
+     "details": "Such as bookshelves, and extra storage",
+     "est": 4500000,
+     "paid": 2500000
+    }
+   ]
+  },
+  "kitchen": {
+   "order": 8,
+   "name": "Kitchen Setup",
+   "room": "kitchen",
+   "short": "Kitchen",
+   "full": "Kitchen setup",
+   "items": [
+    {
+     "id": "b0037",
+     "name": "1. Kitchen Furniture",
+     "details": "Marble top with cabinets and electrical ports",
+     "est": 8685800,
+     "paid": 6285800,
+     "link": "chatgpt.com/c/6707cd80-518c-8010-a59e-2a2fe48534cd"
+    },
+    {
+     "id": "b0038",
+     "name": "2. Dining Set",
+     "details": "Bar stools, shelves",
+     "est": 2000000,
+     "paid": 0
+    },
+    {
+     "id": "b0039",
+     "name": "3. Cooking Appliances",
+     "details": "Hood, built-in stove, oven",
+     "est": 5000000,
+     "paid": 761600
+    },
+    {
+     "id": "b0040",
+     "name": "4. Sink & Plumbing",
+     "details": "Double stainless sink",
+     "est": 600000,
+     "paid": 0
+    }
+   ]
+  },
+  "shrine": {
+   "order": 9,
+   "name": "Lightnings & Shrine",
+   "room": "shrine",
+   "short": "Shrine & lights",
+   "full": "Lighting and shrine",
+   "items": [
+    {
+     "id": "b0041",
+     "name": "1. Meditation Mats",
+     "details": "Buddhist cushions, floor mats, small shrine",
+     "est": 300000,
+     "paid": 0
+    },
+    {
+     "id": "b0042",
+     "name": "2. Decor & Lighting",
+     "details": "Tranquil lighting, incense stands, calming art",
+     "est": 3000000,
+     "paid": 2642500
+    },
+    {
+     "id": "b0043",
+     "name": "3. Buddha Image",
+     "details": "",
+     "est": 1000000,
+     "paid": 0
+    }
+   ]
+  },
+  "garden": {
+   "order": 10,
+   "name": "Landscaping & Outdoor",
+   "room": "garden",
+   "short": "Garden",
+   "full": "Landscaping and water system",
+   "items": [
+    {
+     "id": "b0044",
+     "name": "1. Garden Paving + Lawn",
+     "details": "Stone pathway and small front/back green space",
+     "est": 0,
+     "paid": 0
+    },
+    {
+     "id": "b0045",
+     "name": "2. Water Pipe, sterilization & pressure pump system",
+     "details": "",
+     "est": 4000000,
+     "paid": 2895500
+    }
+   ]
+  },
+  "smart": {
+   "order": 11,
+   "name": "IoT Smart Home System",
+   "room": "smart",
+   "short": "Smart home",
+   "full": "Smart home and air-con",
+   "items": [
+    {
+     "id": "b0046",
+     "name": "1. Speakers (living-room, kitchen and master bedroom)",
+     "details": "Samsung Soundbar",
+     "est": 0,
+     "paid": 0
+    },
+    {
+     "id": "b0047",
+     "name": "2. Voice assistant devices (optional)",
+     "details": "Homepod Mini",
+     "est": 0,
+     "paid": 0
+    },
+    {
+     "id": "b0048",
+     "name": "3. Samsung QA65Q7F4AKXMR 65 inches QLED 4K Smart TV 2025",
+     "details": "LG 65-inch 65UR8050PSB Smart TV (Black)",
+     "est": 0,
+     "paid": 0
+    },
+    {
+     "id": "b0049",
+     "name": "4. Smart Door lock",
+     "details": "1 master bedroom door",
+     "est": 800000,
+     "paid": 540900
+    },
+    {
+     "id": "b0050",
+     "name": "5. Air-conditioning",
+     "details": "Inverter type Air-con for three bedrooms and Mi tower for living room",
+     "est": 4133000,
+     "paid": 4133000
+    },
+    {
+     "id": "b0051",
+     "name": "6. Light Tray",
+     "details": "Aqara brand 2pcs for each category",
+     "est": 1000000,
+     "paid": 0,
+     "link": "https://ict.com.mm/products/lg-16-6-cubic-feet-multi-door-refrigerator-smart-inverter-system-gcf20ffbfb"
+    },
+    {
+     "id": "b0052",
+     "name": "7. Smart Fridge (2-door side to side)",
+     "details": "LG/Samsung energy-efficient model",
+     "est": 4000000,
+     "paid": 3900000
+    },
+    {
+     "id": "b0053",
+     "name": "8. Smart Washing Machine",
+     "details": "Samsung Front Load Washing Machine Inverter 12 kg (WW12BB944DGBST)",
+     "est": 0,
+     "paid": 0,
+     "link": "https://www.m9estore.com/product_detail/home-appliance/Washing%20Machine/297"
+    },
+    {
+     "id": "b0054",
+     "name": "9. Smart Hub Station",
+     "details": "Zigbee + Matter + Thread support",
+     "est": 0,
+     "paid": 0
+    }
+   ]
+  },
+  "bath": {
+   "order": 12,
+   "name": "Bathroom Fixtures & Water Heating",
+   "room": "bath",
+   "short": "Bathrooms",
+   "full": "Bathroom fixtures",
+   "items": [
+    {
+     "id": "b0055",
+     "name": "1. Bathtubs",
+     "details": "1 master bedroom",
+     "est": 0,
+     "paid": 0
+    },
+    {
+     "id": "b0056",
+     "name": "2. Toilet (except our room)",
+     "details": "for all bathrooms",
+     "est": 1650000,
+     "paid": 550000
+    },
+    {
+     "id": "b0057",
+     "name": "3. Bathroom furniture and toiletries",
+     "details": "for all bathrooms",
+     "est": 300000,
+     "paid": 0
+    },
+    {
+     "id": "b0058",
+     "name": "4. Showerhead",
+     "details": "for all bathrooms",
+     "est": 2125500,
+     "paid": 2125500
+    },
+    {
+     "id": "b0059",
+     "name": "5. Sinks (three)",
+     "details": "for all bathrooms",
+     "est": 956000,
+     "paid": 756000
+    }
+   ]
+  },
+  "reserve": {
+   "order": 13,
+   "name": "Reserve/Emergency Fund",
+   "room": "reserve",
+   "short": "Reserve",
+   "full": "Reserve fund",
+   "items": [
+    {
+     "id": "b0060",
+     "name": "1. Contingency Budget",
+     "details": "For sudden price fluctuations, delays, add-ons",
+     "est": 10000000,
+     "paid": 9096000
+    }
+   ]
+  }
+ },
+ "expenses": {
+  "2026-05": {
+   "items": [
+    {
+     "id": "e0061",
+     "date": "2026-05-04",
+     "item": "ညိုတေး",
+     "amount": 200000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0062",
+     "date": "2026-05-04",
+     "item": "အတူး",
+     "amount": 300000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0063",
+     "date": "2026-05-04",
+     "item": "ဖိုးချစ်",
+     "amount": 250000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0064",
+     "date": "2026-05-04",
+     "item": "စျေးဖိုး",
+     "amount": 50000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0065",
+     "date": "2026-05-05",
+     "item": "သစ်ပင်ခုတ်",
+     "amount": 250000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0066",
+     "date": "2026-05-06",
+     "item": "သစ်် ၃ တန်",
+     "amount": 12302500,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0067",
+     "date": "2026-05-06",
+     "item": "Nails 2ခွဲ (pack 1 viss)",
+     "amount": 275000,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0068",
+     "date": "2026-05-06",
+     "item": "Nails ၅မတ် (pack 1 viss)",
+     "amount": 72500,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0069",
+     "date": "2026-05-06",
+     "item": "ကားခ",
+     "amount": 350000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0070",
+     "date": "2026-05-06",
+     "item": "အသုံးအဆောင် ပစ္စည်းဝယ်",
+     "amount": 78000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0071",
+     "date": "2026-05-06",
+     "item": "Sand",
+     "amount": 600000,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0072",
+     "date": "2026-05-06",
+     "item": "မြေသန့်ဘုရားစာရွတ်",
+     "amount": 90000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0073",
+     "date": "2026-05-06",
+     "item": "သံမှို",
+     "amount": 15000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0074",
+     "date": "2026-05-06",
+     "item": "စျေးဖိုး",
+     "amount": 80000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0075",
+     "date": "2026-05-06",
+     "item": "ရေပိုက်",
+     "amount": 35000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0076",
+     "date": "2026-05-07",
+     "item": "ပန္နက်ရိုက်ပဆံကြဲ",
+     "amount": 60000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0077",
+     "date": "2026-05-07",
+     "item": "ဆရာပန္နက်ရိုက်ပူဇော်ခ",
+     "amount": 300000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0078",
+     "date": "2026-05-07",
+     "item": "ပစ္စည်းအတိုအထွာ",
+     "amount": 200000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0079",
+     "date": "2026-05-07",
+     "item": "စျေးဖိုး",
+     "amount": 345000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0080",
+     "date": "2026-05-08",
+     "item": "စွပ်ကျယ်၊ ဦးထုပ်",
+     "amount": 136500,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0081",
+     "date": "2026-05-08",
+     "item": "ပဲချောင်း၊ မုန့်",
+     "amount": 19000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0082",
+     "date": "2026-05-08",
+     "item": "ရှိုးဝါး",
+     "amount": 32000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0083",
+     "date": "2026-05-08",
+     "item": "ကွမ်းဖိုး",
+     "amount": 30000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0084",
+     "date": "2026-05-08",
+     "item": "အုန်းမွှေးလုံးပြင်၊ရေပိုက်ပြင်",
+     "amount": 45000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0085",
+     "date": "2026-05-09",
+     "item": "မြေတူးသမား စရံပေး",
+     "amount": 300000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0086",
+     "date": "2026-05-10",
+     "item": "ဖိုးချစ်",
+     "amount": 350000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0087",
+     "date": "2026-05-10",
+     "item": "စျာန်ထွန်း",
+     "amount": 240000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0088",
+     "date": "2026-05-11",
+     "item": "Stirrups",
+     "amount": 1580000,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0089",
+     "date": "2026-05-11",
+     "item": "Binding Wire",
+     "amount": 504000,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0090",
+     "date": "2026-05-11",
+     "item": "မြေတူးသမား စရံပေး",
+     "amount": 500000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0091",
+     "date": "2026-05-14",
+     "item": "မြေတူးသမား စရံပေး",
+     "amount": 500000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0092",
+     "date": "2026-05-14",
+     "item": "ဘိုဉာဏ်",
+     "amount": 300000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0093",
+     "date": "2026-05-18",
+     "item": "မြေတူးခလက်ကျန်",
+     "amount": 640000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0094",
+     "date": "2026-05-18",
+     "item": "ငါးခြောက်",
+     "amount": 58000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0095",
+     "date": "2026-05-18",
+     "item": "ဦီးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0096",
+     "date": "2026-05-18",
+     "item": "ဝိုင်ယာကြိုး",
+     "amount": 200000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0097",
+     "date": "2026-05-18",
+     "item": "ဖြတ်ဘီး",
+     "amount": 40000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0098",
+     "date": "2026-05-18",
+     "item": "စျေးဖိုး",
+     "amount": 200000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0099",
+     "date": "2026-05-18",
+     "item": "Stirrups Second Order",
+     "amount": 1613150,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0100",
+     "date": "2026-05-18",
+     "item": "Aggregate",
+     "amount": 1560000,
+     "cat": "Structural Materials (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0101",
+     "date": "2026-05-18",
+     "item": "ဝါးကပ်+ရေကန်မိုးကာ+ရေပိုက်",
+     "amount": 150000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0102",
+     "date": "2026-05-18",
+     "item": "U Nyan Htun Vibrator Buy",
+     "amount": 300000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0103",
+     "date": "2026-05-18",
+     "item": "Charcoal",
+     "amount": 100000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0104",
+     "date": "2026-05-23",
+     "item": "ရေမြုပ်မော်တာ",
+     "amount": 407000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0105",
+     "date": "2026-05-24",
+     "item": "cold drinks",
+     "amount": 50000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0106",
+     "date": "2026-05-24",
+     "item": "ကန်တော့ပွဲကြေး",
+     "amount": 30000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0107",
+     "date": "2026-05-24",
+     "item": "ရေပုံးဖိုး",
+     "amount": 75000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0108",
+     "date": "2026-05-30",
+     "item": "ကားခ",
+     "amount": 150000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0109",
+     "date": "2026-05-30",
+     "item": "လခ",
+     "amount": 3134000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0110",
+     "date": "2026-05-30",
+     "item": "ဖိုးချစ််ကြိုထုတ်",
+     "amount": 100000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0111",
+     "date": "2026-05-31",
+     "item": "ကြီးကြီး စျေးဖိုး",
+     "amount": 50000,
+     "cat": "Labour (May 2026)",
+     "checked": true
+    }
+   ]
+  },
+  "2026-06": {
+   "items": [
+    {
+     "id": "e0112",
+     "date": "2026-06-01",
+     "item": "စျေးဖိုး (ကိုယ်တိုင်ဝယ်)",
+     "amount": 118600,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0113",
+     "date": "2026-06-01",
+     "item": "Interior Design",
+     "amount": 1009235,
+     "cat": "3. Interior Design",
+     "checked": true
+    },
+    {
+     "id": "e0114",
+     "date": "2026-06-01",
+     "item": "စျေးဖိုးကြီးစိန်",
+     "amount": 200000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0115",
+     "date": "2026-06-01",
+     "item": "စျာန်ထွန်း",
+     "amount": 110000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0116",
+     "date": "2026-06-01",
+     "item": "အတူးကြိုထုတ်",
+     "amount": 200000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0117",
+     "date": "2026-06-01",
+     "item": "သဲ ၃ ကျင်း ၂ စီး",
+     "amount": 400000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0118",
+     "date": "2026-06-05",
+     "item": "မိုးကာ",
+     "amount": 80000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0119",
+     "date": "2026-06-05",
+     "item": "ရေလုံသုတ်ဆေး",
+     "amount": 160000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0120",
+     "date": "2026-06-05",
+     "item": "ဒီဇယ်",
+     "amount": 15000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0121",
+     "date": "2026-06-05",
+     "item": "ဒီဇယ် 5 ဂါလံ",
+     "amount": 160000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0122",
+     "date": "2026-06-05",
+     "item": "မြေသယ်တောင်း",
+     "amount": 15000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0123",
+     "date": "2026-06-05",
+     "item": "မြေသယ် အကူ",
+     "amount": 25000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0124",
+     "date": "2026-06-05",
+     "item": "မြေသယ် အကူ 4  ယောက် ၂ ရက်",
+     "amount": 250000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0125",
+     "date": "2026-06-11",
+     "item": "16mm ၃ တန်",
+     "amount": 9990000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0126",
+     "date": "2026-06-11",
+     "item": "Cement 300",
+     "amount": 4950000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0127",
+     "date": "2026-06-11",
+     "item": "Stirrups",
+     "amount": 664125,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0128",
+     "date": "2026-06-11",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0129",
+     "date": "2026-06-11",
+     "item": "ဘိုဉာဏ်",
+     "amount": 500000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0130",
+     "date": "2026-06-11",
+     "item": "အတူး",
+     "amount": 50000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0131",
+     "date": "2026-06-11",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 50000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0132",
+     "date": "2026-06-11",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0133",
+     "date": "2026-06-11",
+     "item": "စျာန်ထွန်း",
+     "amount": 20000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0134",
+     "date": "2026-06-11",
+     "item": "ဦးဇင်း",
+     "amount": 50000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0135",
+     "date": "2026-06-11",
+     "item": "ဖိုးချစ်",
+     "amount": 50000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0136",
+     "date": "2026-06-11",
+     "item": "ပလပ်စတစ်အခင်း",
+     "amount": 150000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0137",
+     "date": "2026-06-11",
+     "item": "သဲက နှစ်ကျင်း",
+     "amount": 140000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0138",
+     "date": "2026-06-11",
+     "item": "စျေးဖိုး",
+     "amount": 200000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0139",
+     "date": "2026-06-11",
+     "item": "Labour အကူ",
+     "amount": 250000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0140",
+     "date": "2026-06-11",
+     "item": "ကျောက်ဖိုး",
+     "amount": 380000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0141",
+     "date": "2026-06-11",
+     "item": "သဲတစ်စီး",
+     "amount": 200000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0142",
+     "date": "2026-06-11",
+     "item": "ကျောက််တစ်စီး",
+     "amount": 380000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0143",
+     "date": "2026-06-11",
+     "item": "အတူး",
+     "amount": 30000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0144",
+     "date": "2026-06-11",
+     "item": "T တိုင်",
+     "amount": 1000000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0145",
+     "date": "2026-06-11",
+     "item": "T တိုင် carry",
+     "amount": 120000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0146",
+     "date": "2026-06-11",
+     "item": "ပိုက်ဆံကြဲ",
+     "amount": 45000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0147",
+     "date": "2026-06-11",
+     "item": "ကန်တော့ပွဲ",
+     "amount": 15000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0148",
+     "date": "2026-06-11",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 650000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0149",
+     "date": "2026-06-11",
+     "item": "စျာန်ထွန်း",
+     "amount": 150000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0150",
+     "date": "2026-06-11",
+     "item": "ဦးအောင်မင်း",
+     "amount": 700000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0151",
+     "date": "2026-06-11",
+     "item": "ဖိုးချစ်",
+     "amount": 550000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0152",
+     "date": "2026-06-11",
+     "item": "အတူး",
+     "amount": 420000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0153",
+     "date": "2026-06-11",
+     "item": "ဦးမင်းမင်း",
+     "amount": 650000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0154",
+     "date": "2026-06-11",
+     "item": "ညိုတေး",
+     "amount": 650000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0155",
+     "date": "2026-06-11",
+     "item": "9mm အထပ်သား",
+     "amount": 660000,
+     "cat": "Structural Materials (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0156",
+     "date": "2026-06-11",
+     "item": "ဘိုဉာဏ်",
+     "amount": 284000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0157",
+     "date": "2026-06-11",
+     "item": "အတူး",
+     "amount": 80000,
+     "cat": "Labour (July 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0158",
+     "date": "2026-06-11",
+     "item": "ဦးဇင်း",
+     "amount": 650000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0159",
+     "date": "2026-06-11",
+     "item": "အတူး",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0160",
+     "date": "2026-06-11",
+     "item": "ဝါးစုကြည်",
+     "amount": 150000,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0161",
+     "date": "2026-06-11",
+     "item": "Stirrups",
+     "amount": 1408000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0162",
+     "date": "2026-06-11",
+     "item": "စျေးဖိုး",
+     "amount": 117700,
+     "cat": "Labour (June 2026)",
+     "checked": true
+    }
+   ]
+  },
+  "2026-07": {
+   "items": [
+    {
+     "id": "e0163",
+     "date": "2026-07-01",
+     "item": "Binging Wire",
+     "amount": 220000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0164",
+     "date": "2026-07-01",
+     "item": "Sand",
+     "amount": 200000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0165",
+     "date": "2026-07-01",
+     "item": "ဘိုဉာဏ်",
+     "amount": 300000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0166",
+     "date": "2026-07-01",
+     "item": "ငါးခြောက်",
+     "amount": 67000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0167",
+     "date": "2026-07-01",
+     "item": "စျေးဖိုး",
+     "amount": 62300,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0168",
+     "date": "2026-07-01",
+     "item": "လုပ်အားခအကူ",
+     "amount": 480000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0169",
+     "date": "2026-07-01",
+     "item": "မုန့်ကျွေး",
+     "amount": 140000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0170",
+     "date": "2026-07-01",
+     "item": "အတူး",
+     "amount": 545000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0171",
+     "date": "2026-07-01",
+     "item": "Stirrups",
+     "amount": 2128900,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0172",
+     "date": "2026-07-01",
+     "item": "Binding Wire",
+     "amount": 145000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0173",
+     "date": "2026-07-01",
+     "item": "ညိုတေး ဆေးခန်းပို့",
+     "amount": 15000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0174",
+     "date": "2026-07-06",
+     "item": "Sand",
+     "amount": 200000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0175",
+     "date": "2026-07-06",
+     "item": "Aggregate",
+     "amount": 380000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0176",
+     "date": "2026-07-07",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0177",
+     "date": "2026-07-09",
+     "item": "မီးသွေး",
+     "amount": 100000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0178",
+     "date": "2026-07-10",
+     "item": "16mm",
+     "amount": 3500000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0179",
+     "date": "2026-07-10",
+     "item": "စျာန်ထွန်း clinic",
+     "amount": 15000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0180",
+     "date": "2026-07-13",
+     "item": "ဖိုးချစ်",
+     "amount": 50000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0181",
+     "date": "2026-07-13",
+     "item": "စျာန်ထွန်း",
+     "amount": 10000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0182",
+     "date": "2026-07-13",
+     "item": "ညိုတေး",
+     "amount": 100000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0183",
+     "date": "2026-07-13",
+     "item": "ဝါးစုကြည်",
+     "amount": 20000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0184",
+     "date": "2026-07-13",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 50000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0185",
+     "date": "2026-07-16",
+     "item": "ဖိုးချစ်",
+     "amount": 100000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0186",
+     "date": "2026-07-16",
+     "item": "စျေးဖိုး",
+     "amount": 400000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0187",
+     "date": "2026-07-18",
+     "item": "12mm",
+     "amount": 2980000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0188",
+     "date": "2026-07-18",
+     "item": "10mm 0.5 ton",
+     "amount": 1878055,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0189",
+     "date": "2026-07-18",
+     "item": "stirrups",
+     "amount": 872100,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0190",
+     "date": "2026-07-18",
+     "item": "stirrups",
+     "amount": 254000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0191",
+     "date": "2026-07-19",
+     "item": "UPG ပုံး",
+     "amount": 52000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0192",
+     "date": "2026-07-19",
+     "item": "စလပ်လောင်းမုန့်ကျွေး",
+     "amount": 125000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0193",
+     "date": "2026-07-19",
+     "item": "လုပ်အားခအကူ",
+     "amount": 220000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0194",
+     "date": "2026-07-19",
+     "item": "ဝါးစုကြည်",
+     "amount": 30000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0195",
+     "date": "2026-07-24",
+     "item": "အတူး",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0196",
+     "date": "2026-07-24",
+     "item": "ဦးအောင်မင်း",
+     "amount": 23000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0197",
+     "date": "2026-07-24",
+     "item": "ဦးမင်းမင်း",
+     "amount": 30000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0198",
+     "date": "2026-07-24",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 23000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0199",
+     "date": "2026-07-24",
+     "item": "ဖိုးချစ်",
+     "amount": 41000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0200",
+     "date": "2026-07-24",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0201",
+     "date": "2026-07-24",
+     "item": "Sand",
+     "amount": 400000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0202",
+     "date": "2026-07-24",
+     "item": "Aggregate",
+     "amount": 380000,
+     "cat": "Structural Materials (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0203",
+     "date": "2026-07-24",
+     "item": "ဦးမင်းမင်း",
+     "amount": 150000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0204",
+     "date": "2026-07-24",
+     "item": "စျာန်ထွန်း",
+     "amount": 20000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0205",
+     "date": "2026-07-24",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0206",
+     "date": "2026-07-24",
+     "item": "ဦးမင်းကိတ်မုန့် 43,000",
+     "amount": 43000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0207",
+     "date": "2026-07-24",
+     "item": "ညိုတေး",
+     "amount": 535000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0208",
+     "date": "2026-07-24",
+     "item": "ဦးအောင်မင်း",
+     "amount": 652000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0209",
+     "date": "2026-07-24",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 602000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0210",
+     "date": "2026-07-24",
+     "item": "ဖိုးချစ်",
+     "amount": 484000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0211",
+     "date": "2026-07-24",
+     "item": "ဦးမင်းမင်း",
+     "amount": 400000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0212",
+     "date": "2026-07-24",
+     "item": "ဘိုဉာဏ်",
+     "amount": 512000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0213",
+     "date": "2026-07-24",
+     "item": "စျာန်ထွန်း",
+     "amount": 220000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0214",
+     "date": "2026-07-24",
+     "item": "ဝါးစုကြည်",
+     "amount": 355000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0215",
+     "date": "2026-07-24",
+     "item": "ဝါးစုကြည်",
+     "amount": 420000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0216",
+     "date": "2026-07-24",
+     "item": "ဦးမင်းမင်း",
+     "amount": 45000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0217",
+     "date": "2026-07-24",
+     "item": "ဦးဇင်း",
+     "amount": 675000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    }
+   ]
+  },
+  "2026-08": {
+   "items": [
+    {
+     "id": "e0218",
+     "date": "2026-08-01",
+     "item": "ဘိုဉာဏ်",
+     "amount": 500000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0219",
+     "date": "2026-08-01",
+     "item": "စျေးဖိုး",
+     "amount": 420000,
+     "cat": "Labour (July 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0220",
+     "date": "2026-08-01",
+     "item": "စျေးဖိုး",
+     "amount": 80000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0221",
+     "date": "2026-08-01",
+     "item": "ဦးအောင်မင်း",
+     "amount": 10000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0222",
+     "date": "2026-08-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0223",
+     "date": "2026-08-01",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0224",
+     "date": "2026-08-01",
+     "item": "Binding Wire",
+     "amount": 55000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0225",
+     "date": "2026-08-01",
+     "item": "ဝါယာကြိုး",
+     "amount": 260000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0226",
+     "date": "2026-08-01",
+     "item": "တိုလီမိုလီ (သံ)",
+     "amount": 65000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0227",
+     "date": "2026-08-01",
+     "item": "တိပ်",
+     "amount": 20000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0228",
+     "date": "2026-08-01",
+     "item": "တံမြက်စည်းကြမ်း",
+     "amount": 10000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0229",
+     "date": "2026-08-01",
+     "item": "ဖိုးချစ်",
+     "amount": 20000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0230",
+     "date": "2026-08-01",
+     "item": "ဝါးစုကြည်",
+     "amount": 35000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0231",
+     "date": "2026-08-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 30000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0232",
+     "date": "2026-08-01",
+     "item": "အတူး",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0233",
+     "date": "2026-08-01",
+     "item": "ဦးအောင်မင်း",
+     "amount": 10000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0234",
+     "date": "2026-08-01",
+     "item": "ညိုတေး",
+     "amount": 10000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0235",
+     "date": "2026-08-01",
+     "item": "Labour အကူ",
+     "amount": 350000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0236",
+     "date": "2026-08-01",
+     "item": "ညိုတေး",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0237",
+     "date": "2026-08-01",
+     "item": "စျာန်ထွန်း",
+     "amount": 10000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0238",
+     "date": "2026-08-01",
+     "item": "စလပ်လောင်းမုန့်ကျွေး",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0239",
+     "date": "2026-08-01",
+     "item": "ဖိုးချစ်",
+     "amount": 200000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0240",
+     "date": "2026-08-01",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0241",
+     "date": "2026-08-01",
+     "item": "ညိုတေး",
+     "amount": 30000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0242",
+     "date": "2026-08-01",
+     "item": "စျာန်ထွန်း",
+     "amount": 30000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0243",
+     "date": "2026-08-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0244",
+     "date": "2026-08-01",
+     "item": "အတူး",
+     "amount": 50000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0245",
+     "date": "2026-08-01",
+     "item": "Misc",
+     "amount": 50000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0246",
+     "date": "2026-08-01",
+     "item": "Rice",
+     "amount": 380000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0247",
+     "date": "2026-08-01",
+     "item": "ညိုတေး",
+     "amount": 15000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0248",
+     "date": "2026-08-01",
+     "item": "Sand",
+     "amount": 200000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0249",
+     "date": "2026-08-01",
+     "item": "Misc",
+     "amount": 50000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0250",
+     "date": "2026-08-01",
+     "item": "Bricks",
+     "amount": 4400000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0251",
+     "date": "2026-08-01",
+     "item": "ညိုတေး",
+     "amount": 10000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0252",
+     "date": "2026-08-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0253",
+     "date": "2026-08-01",
+     "item": "စျေးဖိုး",
+     "amount": 660000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0254",
+     "date": "2026-08-01",
+     "item": "Doors",
+     "amount": 4500000,
+     "cat": "MainDoors & Internal/BackDoors",
+     "checked": false
+    },
+    {
+     "id": "e0255",
+     "date": "2026-08-01",
+     "item": "Misc",
+     "amount": 50000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0256",
+     "date": "2026-08-01",
+     "item": "ပိုက်ကွန်",
+     "amount": 250000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0257",
+     "date": "2026-08-25",
+     "item": "ဖိုးချစ်",
+     "amount": 100000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0258",
+     "date": "2026-08-25",
+     "item": "အတူး",
+     "amount": 50000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0259",
+     "date": "2026-08-26",
+     "item": "ဖိုးချစ်",
+     "amount": 35000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0260",
+     "date": "2026-08-26",
+     "item": "အတူး",
+     "amount": 30000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0261",
+     "date": "2026-08-26",
+     "item": "ညိုတေး",
+     "amount": 15000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0262",
+     "date": "2026-08-26",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 600000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0263",
+     "date": "2026-08-26",
+     "item": "ဦးအောင်မင်း",
+     "amount": 600000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0264",
+     "date": "2026-08-26",
+     "item": "ဦးမင်းမင်း",
+     "amount": 470000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0265",
+     "date": "2026-08-26",
+     "item": "ညိုတေး",
+     "amount": 400000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0266",
+     "date": "2026-08-26",
+     "item": "ဖိုးချစ်",
+     "amount": 150000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0267",
+     "date": "2026-08-26",
+     "item": "စျာန်ထွန်း",
+     "amount": 210000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0268",
+     "date": "2026-08-26",
+     "item": "ဘိုဉာဏ်",
+     "amount": 284000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0269",
+     "date": "2026-08-26",
+     "item": "ဦးဇင်း",
+     "amount": 150000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0270",
+     "date": "2026-08-26",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0271",
+     "date": "2026-08-26",
+     "item": "ဘိုဉာဏ်",
+     "amount": 750000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0272",
+     "date": "2026-08-26",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0273",
+     "date": "2026-08-26",
+     "item": "ဖိုးချစ်",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0274",
+     "date": "2026-08-26",
+     "item": "ဘိုဉာဏ်",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0275",
+     "date": "2026-08-26",
+     "item": "အတူး",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0276",
+     "date": "2026-08-26",
+     "item": "ဦးအောင်မင်း",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0277",
+     "date": "2026-08-26",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0278",
+     "date": "2026-08-26",
+     "item": "ဦးမင်းမင်း",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0279",
+     "date": "2026-08-26",
+     "item": "စျာန်ထွန်း",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0280",
+     "date": "2026-08-26",
+     "item": "ဝါးစုကြည်",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0281",
+     "date": "2026-08-26",
+     "item": "T တိုင်ပို့ခ",
+     "amount": 100000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0282",
+     "date": "2026-08-26",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0283",
+     "date": "2026-08-26",
+     "item": "ဝါး",
+     "amount": 175000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0284",
+     "date": "2026-08-26",
+     "item": "ဖိုးချစ်",
+     "amount": 145000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0285",
+     "date": "2026-08-26",
+     "item": "ဦးအောင်မင်း",
+     "amount": 55000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0286",
+     "date": "2026-08-26",
+     "item": "အတူး",
+     "amount": 220000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0287",
+     "date": "2026-08-26",
+     "item": "ဦးဇင်း",
+     "amount": 450000,
+     "cat": "Labour (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0288",
+     "date": "2026-08-26",
+     "item": "ပလပ်စတစ်ကြိုး",
+     "amount": 35000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0289",
+     "date": "2026-08-26",
+     "item": "တိုလီမိုလီ (သံ)",
+     "amount": 80000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    }
+   ]
+  },
+  "2026-09": {
+   "items": [
+    {
+     "id": "e0290",
+     "date": "2026-09-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0291",
+     "date": "2026-09-01",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0292",
+     "date": "2026-09-01",
+     "item": "ဖိုးချစ်",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0293",
+     "date": "2026-09-01",
+     "item": "အတူး",
+     "amount": 200000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0294",
+     "date": "2026-09-01",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0295",
+     "date": "2026-09-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 100000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0296",
+     "date": "2026-09-01",
+     "item": "aluminium",
+     "amount": 70000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0297",
+     "date": "2026-09-01",
+     "item": "misc",
+     "amount": 100000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0298",
+     "date": "2026-09-01",
+     "item": "shower head",
+     "amount": 1413000,
+     "cat": "4. Showerhead",
+     "checked": true
+    },
+    {
+     "id": "e0299",
+     "date": "2026-09-01",
+     "item": "shower head",
+     "amount": 712500,
+     "cat": "4. Showerhead",
+     "checked": true
+    },
+    {
+     "id": "e0300",
+     "date": "2026-09-01",
+     "item": "basin except main room",
+     "amount": 756000,
+     "cat": "5. Sinks (three)",
+     "checked": true
+    },
+    {
+     "id": "e0301",
+     "date": "2026-09-01",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0302",
+     "date": "2026-09-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 150000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0303",
+     "date": "2026-09-01",
+     "item": "aluminium + light bulbs",
+     "amount": 120000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0304",
+     "date": "2026-09-01",
+     "item": "ဖိုးချစ်",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0305",
+     "date": "2026-09-01",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0306",
+     "date": "2026-09-01",
+     "item": "water pipe",
+     "amount": 1034000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0307",
+     "date": "2026-09-01",
+     "item": "အတူး",
+     "amount": 100000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0308",
+     "date": "2026-09-01",
+     "item": "စျေးဖိုး",
+     "amount": 720000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0309",
+     "date": "2026-09-01",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0310",
+     "date": "2026-09-01",
+     "item": "ဝါးစုကြည်",
+     "amount": 20000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0311",
+     "date": "2026-09-01",
+     "item": "ဖိုးချစ်",
+     "amount": 100000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0312",
+     "date": "2026-09-01",
+     "item": "Sand",
+     "amount": 200000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0313",
+     "date": "2026-09-01",
+     "item": "ဝါးစုကြည်",
+     "amount": 250000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0314",
+     "date": "2026-09-01",
+     "item": "ဦးဇင်း",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0315",
+     "date": "2026-09-01",
+     "item": "Bricks",
+     "amount": 880000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0316",
+     "date": "2026-09-01",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0317",
+     "date": "2026-09-01",
+     "item": "Rice",
+     "amount": 380000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0318",
+     "date": "2026-09-01",
+     "item": "ဖိုးချစ်",
+     "amount": 300000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0319",
+     "date": "2026-09-01",
+     "item": "ညိုတေး",
+     "amount": 30000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0320",
+     "date": "2026-09-01",
+     "item": "ညိုတေး",
+     "amount": 100000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0321",
+     "date": "2026-09-19",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0322",
+     "date": "2026-09-19",
+     "item": "အတူး",
+     "amount": 50000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0323",
+     "date": "2026-09-19",
+     "item": "အတူး",
+     "amount": 30000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0324",
+     "date": "2026-09-19",
+     "item": "Misc",
+     "amount": 175000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0325",
+     "date": "2026-09-19",
+     "item": "Wall Lamp",
+     "amount": 160000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0326",
+     "date": "2026-09-24",
+     "item": "ဦးမင်းမင်း",
+     "amount": 100000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0327",
+     "date": "2026-09-24",
+     "item": "ဦးဇင်း",
+     "amount": 250000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0328",
+     "date": "2026-09-24",
+     "item": "Floor tiles",
+     "amount": 2526400,
+     "cat": "Ground Floor Tiles",
+     "checked": false
+    },
+    {
+     "id": "e0329",
+     "date": "2026-09-24",
+     "item": "Bathroom tiles",
+     "amount": 1120000,
+     "cat": "Bathroom and WC wall tiles",
+     "checked": false
+    },
+    {
+     "id": "e0330",
+     "date": "2026-09-24",
+     "item": "Sand",
+     "amount": 200000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0331",
+     "date": "2026-09-24",
+     "item": "ညိုတေး",
+     "amount": 200000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0332",
+     "date": "2026-09-24",
+     "item": "အတူး",
+     "amount": 200000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0333",
+     "date": "2026-09-24",
+     "item": "ဦးအောင်မင်း",
+     "amount": 600000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0334",
+     "date": "2026-09-24",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 580000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0335",
+     "date": "2026-09-24",
+     "item": "စျာန်ထွန်း",
+     "amount": 120000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0336",
+     "date": "2026-09-24",
+     "item": "ဒီဇယ်ဆီ",
+     "amount": 30000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0337",
+     "date": "2026-09-24",
+     "item": "အမေသောင်းအိမ်သာကျင်းတူး",
+     "amount": 1000000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0338",
+     "date": "2026-09-24",
+     "item": "ဦးမင်းမင်း",
+     "amount": 180000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0339",
+     "date": "2026-09-24",
+     "item": "ညိုတေး",
+     "amount": 80000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0340",
+     "date": "2026-09-24",
+     "item": "ဖိုးချစ်",
+     "amount": 160000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0341",
+     "date": "2026-09-24",
+     "item": "အတူး",
+     "amount": 25000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0342",
+     "date": "2026-09-24",
+     "item": "ဦးဇင်း",
+     "amount": 350000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0343",
+     "date": "2026-09-24",
+     "item": "ဝါးစုကြည်",
+     "amount": 65000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0344",
+     "date": "2026-09-24",
+     "item": "ဦးအောင်မင်း",
+     "amount": 30000,
+     "cat": "Labour (September 2026)",
+     "checked": false
+    }
+   ]
+  },
+  "2026-10": {
+   "items": [
+    {
+     "id": "e0345",
+     "date": "2026-10-01",
+     "item": "ဘိုဉာဏ်",
+     "amount": 636000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0346",
+     "date": "2026-10-01",
+     "item": "ညိုတေး",
+     "amount": 200000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0347",
+     "date": "2026-10-01",
+     "item": "အတူး",
+     "amount": 200000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0348",
+     "date": "2026-10-01",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0349",
+     "date": "2026-10-01",
+     "item": "အတူး",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0350",
+     "date": "2026-10-01",
+     "item": "Bricks",
+     "amount": 1290000,
+     "cat": "Structural Materials (Oct 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0351",
+     "date": "2026-10-01",
+     "item": "Cement",
+     "amount": 1450000,
+     "cat": "Structural Materials (Oct 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0352",
+     "date": "2026-10-01",
+     "item": "ဖိုးချစ်",
+     "amount": 400000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0353",
+     "date": "2026-10-01",
+     "item": "Cooking Oil",
+     "amount": 150000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0354",
+     "date": "2026-10-01",
+     "item": "Bamboo",
+     "amount": 550000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0355",
+     "date": "2026-10-01",
+     "item": "Paints",
+     "amount": 5491500,
+     "cat": "Interior & exterior paint",
+     "checked": false
+    },
+    {
+     "id": "e0356",
+     "date": "2026-10-01",
+     "item": "အတူး",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0357",
+     "date": "2026-10-07",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0358",
+     "date": "2026-10-07",
+     "item": "ဦးအောင်မင်း",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0359",
+     "date": "2026-10-07",
+     "item": "ညိုတေး",
+     "amount": 30000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0360",
+     "date": "2026-10-07",
+     "item": "ဘိုဉာဏ်",
+     "amount": 100000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0361",
+     "date": "2026-10-11",
+     "item": "ညိုတေး",
+     "amount": 100000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0362",
+     "date": "2026-10-11",
+     "item": "ဝါးစုကြည်",
+     "amount": 30000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0363",
+     "date": "2026-10-11",
+     "item": "စျေးဖိုး",
+     "amount": 355000,
+     "cat": "Labour (September 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0364",
+     "date": "2026-10-11",
+     "item": "စျေးဖိုး",
+     "amount": 585000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0365",
+     "date": "2026-10-14",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0366",
+     "date": "2026-10-13",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0367",
+     "date": "2026-10-15",
+     "item": "အတူး",
+     "amount": 20000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0368",
+     "date": "2026-10-15",
+     "item": "ဦးဇင်း",
+     "amount": 30000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0369",
+     "date": "2026-10-15",
+     "item": "ညိုတေး",
+     "amount": 10000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0370",
+     "date": "2026-10-15",
+     "item": "ဝါးစုကြည်",
+     "amount": 10000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0371",
+     "date": "2026-10-15",
+     "item": "Kitchen Furniture",
+     "amount": 4000000,
+     "cat": "1. Kitchen Furniture",
+     "checked": false
+    },
+    {
+     "id": "e0372",
+     "date": "2026-10-17",
+     "item": "ညိုတေး",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0373",
+     "date": "2026-10-17",
+     "item": "ဦးဇင်း",
+     "amount": 20000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0374",
+     "date": "2026-10-17",
+     "item": "ဘိုဉာဏ်",
+     "amount": 20000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0375",
+     "date": "2026-10-16",
+     "item": "Subway Tiles",
+     "amount": 921900,
+     "cat": "Main Bathroom accent wall tiles",
+     "checked": false
+    },
+    {
+     "id": "e0376",
+     "date": "2026-10-19",
+     "item": "artificial stone",
+     "amount": 1542800,
+     "cat": "1. Kitchen Furniture",
+     "checked": false
+    },
+    {
+     "id": "e0377",
+     "date": "2026-10-18",
+     "item": "Sand",
+     "amount": 200000,
+     "cat": "Structural Materials (August 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0378",
+     "date": "2026-10-17",
+     "item": "ဦးအောင်မင်း",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0379",
+     "date": "2026-10-17",
+     "item": "ဝါးစုကြည်",
+     "amount": 10000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0380",
+     "date": "2026-10-17",
+     "item": "Pipe",
+     "amount": 70000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0381",
+     "date": "2026-10-21",
+     "item": "ညိုတေး",
+     "amount": 30000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0382",
+     "date": "2026-10-21",
+     "item": "ညိုတေး",
+     "amount": 200000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0383",
+     "date": "2026-10-21",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0384",
+     "date": "2026-10-21",
+     "item": "ဖိုးချစ်",
+     "amount": 30000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0385",
+     "date": "2026-10-22",
+     "item": "ဒီဇယ်",
+     "amount": 35000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0386",
+     "date": "2026-10-22",
+     "item": "Roof Handrails",
+     "amount": 3000000,
+     "cat": "4. Roof Handrails",
+     "checked": true
+    },
+    {
+     "id": "e0387",
+     "date": "2026-10-23",
+     "item": "Ceiling",
+     "amount": 75000,
+     "cat": "Ceiling & Partition",
+     "checked": true
+    },
+    {
+     "id": "e0388",
+     "date": "2026-10-23",
+     "item": "Aircon",
+     "amount": 3550000,
+     "cat": "5. Air-conditioning",
+     "checked": true
+    },
+    {
+     "id": "e0389",
+     "date": "2026-10-23",
+     "item": "Mi Tower",
+     "amount": 583000,
+     "cat": "5. Air-conditioning",
+     "checked": true
+    },
+    {
+     "id": "e0390",
+     "date": "2026-10-23",
+     "item": "အတူး",
+     "amount": 60000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0391",
+     "date": "2026-10-26",
+     "item": "ဦးအောင်မင်း",
+     "amount": 575000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0392",
+     "date": "2026-10-26",
+     "item": "ဦးအောင်ထွန်း",
+     "amount": 625000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0393",
+     "date": "2026-10-26",
+     "item": "ဦးမင်းမင်း",
+     "amount": 500000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0394",
+     "date": "2026-10-28",
+     "item": "Furniture",
+     "amount": 2500000,
+     "cat": "4. Custom Furnitures",
+     "checked": false
+    },
+    {
+     "id": "e0395",
+     "date": "2026-10-28",
+     "item": "ရေပိုက်",
+     "amount": 1265000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": true
+    },
+    {
+     "id": "e0396",
+     "date": "2026-10-28",
+     "item": "ဆေးသုတ်ပုံးနဲ့ မျဥ်းတား",
+     "amount": 80000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0397",
+     "date": "2026-10-28",
+     "item": "ဖိုးချစ်",
+     "amount": 20000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0398",
+     "date": "2026-10-28",
+     "item": "Shelfs",
+     "amount": 743000,
+     "cat": "1. Kitchen Furniture",
+     "checked": false
+    },
+    {
+     "id": "e0399",
+     "date": "2026-10-28",
+     "item": "ဝါးစုကြည်",
+     "amount": 40000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0400",
+     "date": "2026-10-29",
+     "item": "ဝါးစုကြည်",
+     "amount": 270000,
+     "cat": "Labour (October 2026)",
+     "checked": true
+    },
+    {
+     "id": "e0401",
+     "date": "2026-10-29",
+     "item": "ကျောက်ပြား မျက်နှာကျက်",
+     "amount": 1285000,
+     "cat": "Ceiling & Partition",
+     "checked": true
+    },
+    {
+     "id": "e0402",
+     "date": "2026-10-29",
+     "item": "ကော်ပတ် နဲ့ ကွမ်းသီး",
+     "amount": 50000,
+     "cat": "1. Contingency Budget",
+     "checked": true
+    },
+    {
+     "id": "e0403",
+     "date": "2026-10-29",
+     "item": "ကျေောက်ပြားပို့ခ",
+     "amount": 30000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0404",
+     "date": "2026-10-29",
+     "item": "Eco wood",
+     "amount": 1410000,
+     "cat": "Ceiling & Partition",
+     "checked": false
+    },
+    {
+     "id": "e0405",
+     "date": "2026-10-29",
+     "item": "Sealer ထပ်ဝယ်",
+     "amount": 595500,
+     "cat": "Interior & exterior paint",
+     "checked": false
+    },
+    {
+     "id": "e0406",
+     "date": "2026-10-29",
+     "item": "မီးသီး",
+     "amount": 56000,
+     "cat": "2. Decor & Lighting",
+     "checked": false
+    },
+    {
+     "id": "e0407",
+     "date": "2026-10-29",
+     "item": "toilet",
+     "amount": 550000,
+     "cat": "2. Toilet (except our room)",
+     "checked": false
+    },
+    {
+     "id": "e0408",
+     "date": "2026-10-29",
+     "item": "Water Labour",
+     "amount": 100000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    },
+    {
+     "id": "e0409",
+     "date": "2026-10-29",
+     "item": "ဖိုးချစ်",
+     "amount": 200000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0410",
+     "date": "2026-10-29",
+     "item": "အတူး",
+     "amount": 270000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0411",
+     "date": "2026-10-29",
+     "item": "ဦးဇင်း",
+     "amount": 625000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0412",
+     "date": "2026-10-29",
+     "item": "ဖိုးချစ်",
+     "amount": 120000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0413",
+     "date": "2026-10-29",
+     "item": "ညိုတေး",
+     "amount": 5000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    }
+   ]
+  },
+  "2026-11": {
+   "items": [
+    {
+     "id": "e0414",
+     "date": "2026-11-03",
+     "item": "ecowood click",
+     "amount": 35000,
+     "cat": "Ceiling & Partition",
+     "checked": false
+    },
+    {
+     "id": "e0415",
+     "date": "2026-11-03",
+     "item": "ကျောက်ပြား မျက်နှာကျက်",
+     "amount": 1040000,
+     "cat": "Ceiling & Partition",
+     "checked": false
+    },
+    {
+     "id": "e0416",
+     "date": "2026-11-02",
+     "item": "မိလ္လာပိုက်",
+     "amount": 200000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    },
+    {
+     "id": "e0417",
+     "date": "2026-11-02",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0418",
+     "date": "2026-11-02",
+     "item": "ဦးမင်းမင်း",
+     "amount": 80000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0419",
+     "date": "2026-11-04",
+     "item": "ဦးမင်းမင်း",
+     "amount": 50000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0420",
+     "date": "2026-11-04",
+     "item": "Skew for ceiling",
+     "amount": 50000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0421",
+     "date": "2026-11-04",
+     "item": "ကောပတ် + ဇကာတိပ်",
+     "amount": 96500,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0422",
+     "date": "2026-11-06",
+     "item": "ကောပတ်",
+     "amount": 100000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0423",
+     "date": "2026-11-06",
+     "item": "uPVC door",
+     "amount": 600000,
+     "cat": "MainDoors & Internal/BackDoors",
+     "checked": false
+    },
+    {
+     "id": "e0424",
+     "date": "2026-11-05",
+     "item": "lighting (pandent)",
+     "amount": 1400000,
+     "cat": "2. Decor & Lighting",
+     "checked": false
+    },
+    {
+     "id": "e0425",
+     "date": "2026-11-05",
+     "item": "lighting (wall lamp)",
+     "amount": 162000,
+     "cat": "2. Decor & Lighting",
+     "checked": false
+    },
+    {
+     "id": "e0426",
+     "date": "2026-11-06",
+     "item": "ညိုတေး",
+     "amount": 200000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0427",
+     "date": "2026-11-06",
+     "item": "အတူး",
+     "amount": 30000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0428",
+     "date": "2026-11-06",
+     "item": "မိိုးရေဆင်းပိုက်",
+     "amount": 161500,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    },
+    {
+     "id": "e0429",
+     "date": "2026-11-06",
+     "item": "ညိုတေး",
+     "amount": 55000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0430",
+     "date": "2026-11-06",
+     "item": "ဖိုးချစ်",
+     "amount": 55000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0431",
+     "date": "2026-11-06",
+     "item": "အတူး",
+     "amount": 55000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0432",
+     "date": "2026-11-06",
+     "item": "ဦးအောင်မင်း",
+     "amount": 55000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0433",
+     "date": "2026-11-06",
+     "item": "ဦးမင်းမင်း",
+     "amount": 55000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0434",
+     "date": "2026-11-06",
+     "item": "ဦးဇင်း",
+     "amount": 55000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0435",
+     "date": "2026-11-08",
+     "item": "Fridge",
+     "amount": 3700000,
+     "cat": "7. Smart Fridge (2-door side to side)",
+     "checked": false
+    },
+    {
+     "id": "e0436",
+     "date": "2026-11-08",
+     "item": "plug",
+     "amount": 850000,
+     "cat": "2. Decor & Lighting",
+     "checked": false
+    },
+    {
+     "id": "e0437",
+     "date": "2026-11-08",
+     "item": "ဦးမင်းမင်း",
+     "amount": 10000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0438",
+     "date": "2026-11-08",
+     "item": "ညိုတေး",
+     "amount": 10000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0439",
+     "date": "2026-11-08",
+     "item": "ecowood extra and clip",
+     "amount": 210000,
+     "cat": "Ceiling & Partition",
+     "checked": false
+    },
+    {
+     "id": "e0440",
+     "date": "2026-11-08",
+     "item": "ကျောက်ပြား မျက်နှာကျက်",
+     "amount": 78000,
+     "cat": "Ceiling & Partition",
+     "checked": false
+    },
+    {
+     "id": "e0441",
+     "date": "2026-11-11",
+     "item": "ဖိုးချစ်",
+     "amount": 100000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0442",
+     "date": "2026-11-11",
+     "item": "ညိုတေး",
+     "amount": 20000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0443",
+     "date": "2026-11-11",
+     "item": "ရေခဲသေတ္တာ ပို့ခ",
+     "amount": 200000,
+     "cat": "7. Smart Fridge (2-door side to side)",
+     "checked": false
+    },
+    {
+     "id": "e0444",
+     "date": "2026-11-11",
+     "item": "ဘိလပ်မြေ",
+     "amount": 665000,
+     "cat": "Structural Materials (Oct 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0445",
+     "date": "2026-11-11",
+     "item": "ရေပိုက် အိမ်သာ",
+     "amount": 450000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    },
+    {
+     "id": "e0446",
+     "date": "2026-11-11",
+     "item": "ပတ်တီး၊ တိပ် for ceiling",
+     "amount": 20000,
+     "cat": "1. Contingency Budget",
+     "checked": false
+    },
+    {
+     "id": "e0447",
+     "date": "2026-11-11",
+     "item": "Smart Door Lock",
+     "amount": 540900,
+     "cat": "4. Smart Door lock",
+     "checked": false
+    },
+    {
+     "id": "e0448",
+     "date": "2026-11-11",
+     "item": "Kitchen items",
+     "amount": 761600,
+     "cat": "3. Cooking Appliances",
+     "checked": false
+    },
+    {
+     "id": "e0449",
+     "date": "2026-11-11",
+     "item": "Lights",
+     "amount": 174500,
+     "cat": "2. Decor & Lighting",
+     "checked": false
+    },
+    {
+     "id": "e0450",
+     "date": "2026-11-14",
+     "item": "Pipe misc",
+     "amount": 100000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    },
+    {
+     "id": "e0451",
+     "date": "2026-11-14",
+     "item": "ညိုတေး",
+     "amount": 10000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0452",
+     "date": "2026-11-14",
+     "item": "Pipe labour (dad)",
+     "amount": 200000,
+     "cat": "Labour (November 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0453",
+     "date": "2026-11-14",
+     "item": "စျေးဖိုး",
+     "amount": 300000,
+     "cat": "Labour (October 2026)",
+     "checked": false
+    },
+    {
+     "id": "e0454",
+     "date": "2026-11-14",
+     "item": "သုံးရေအတွက် ပိုက်",
+     "amount": 610000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    },
+    {
+     "id": "e0455",
+     "date": "2026-11-14",
+     "item": "ရေစစ်ခွက်",
+     "amount": 9000,
+     "cat": "2. Water Pipe, sterilization & pressure pump system",
+     "checked": false
+    }
+   ]
+  }
+ },
+ "loans": {
+  "all": {
+   "items": [
+    {
+     "id": "l0456",
+     "date": "2026-05-06",
+     "from": "Mommy",
+     "amount": 10000000,
+     "via": "My UAB"
+    },
+    {
+     "id": "l0457",
+     "date": "2026-05-09",
+     "from": "Mommy",
+     "amount": 20000000,
+     "via": "KoKo UAB"
+    },
+    {
+     "id": "l0458",
+     "date": "2026-06-26",
+     "from": "Mommy",
+     "amount": 10000000,
+     "via": "KoKo UAB"
+    },
+    {
+     "id": "l0459",
+     "date": "2026-06-26",
+     "from": "Mommy",
+     "amount": 5000000,
+     "via": "Cash"
+    },
+    {
+     "id": "l0460",
+     "date": "2026-07-27",
+     "from": "Mommy",
+     "amount": 20000000,
+     "via": "UAB"
+    },
+    {
+     "id": "l0461",
+     "date": "2026-09-27",
+     "from": "Mommy",
+     "amount": 10000000,
+     "via": "Cash"
+    },
+    {
+     "id": "l0462",
+     "date": "2026-10-31",
+     "from": "Mommy",
+     "amount": 650000,
+     "via": "cash"
+    },
+    {
+     "id": "l0463",
+     "date": "2026-11-11",
+     "from": "Mommy",
+     "amount": 400000,
+     "via": "အားမြင့်"
+    }
+   ]
+  }
+ },
+ "materials": {
+  "all": {
+   "items": [
+    {
+     "id": "m0464",
+     "name": "Crown 52.5 (bag)",
+     "rate": 23000,
+     "unit": "bag",
+     "date": "2026-02-21",
+     "qty": 500,
+     "total": 11500000,
+     "bought": 500,
+     "paid": 11500000,
+     "status": "Done"
+    },
+    {
+     "id": "m0465",
+     "name": "Crown 52.5 (bag)",
+     "rate": 16500,
+     "unit": "bag",
+     "date": "2026-06-11",
+     "qty": 300,
+     "total": 4950000,
+     "bought": 300,
+     "paid": 4950000,
+     "status": "Done"
+    },
+    {
+     "id": "m0466",
+     "name": "Crown 52.5 (bag)",
+     "rate": 14500,
+     "unit": "bag",
+     "date": "2026-10-06",
+     "qty": 100,
+     "total": 1450000,
+     "bought": 100,
+     "paid": 1450000,
+     "status": "Done"
+    },
+    {
+     "id": "m0467",
+     "name": "Crown 52.5 (bag)",
+     "rate": 13300,
+     "unit": "bag",
+     "date": "2026-11-11",
+     "qty": 50,
+     "total": 665000,
+     "bought": 50,
+     "paid": 665000,
+     "status": "Done"
+    },
+    {
+     "id": "m0468",
+     "name": "Sand",
+     "rate": 70000,
+     "unit": "kyin",
+     "date": "2026-02-21",
+     "qty": 40,
+     "total": 2800000,
+     "bought": 39,
+     "paid": 2730000,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0469",
+     "name": "Aggregate",
+     "rate": 130000,
+     "unit": "kyin",
+     "date": "2026-02-21",
+     "qty": 26,
+     "total": 3380000,
+     "bought": 24,
+     "paid": 3120000,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0470",
+     "name": "Bricks (8-hole)",
+     "rate": 430,
+     "unit": "piece",
+     "date": "2026-02-21",
+     "qty": 20000,
+     "total": 8600000,
+     "bought": 20000,
+     "paid": 8600000,
+     "status": "Done"
+    },
+    {
+     "id": "m0471",
+     "name": "Bricks (8-hole)",
+     "rate": 440,
+     "unit": "piece",
+     "date": "2026-08-19",
+     "qty": 12000,
+     "total": 5280000,
+     "bought": 12000,
+     "paid": 5280000,
+     "status": "Done"
+    },
+    {
+     "id": "m0472",
+     "name": "Bricks (8-hole)",
+     "rate": 430,
+     "unit": "piece",
+     "date": "2026-10-06",
+     "qty": 3000,
+     "total": 1290000,
+     "bought": 3000,
+     "paid": 1290000,
+     "status": "Done"
+    },
+    {
+     "id": "m0473",
+     "name": "Rebar 10 mm",
+     "rate": 3600000,
+     "unit": "ton",
+     "date": "2026-02-21",
+     "qty": 1,
+     "total": 3600000,
+     "bought": 1,
+     "paid": 3600000,
+     "status": "Done"
+    },
+    {
+     "id": "m0474",
+     "name": "Rebar 12 mm",
+     "rate": 3350000,
+     "unit": "ton",
+     "date": "2026-02-21",
+     "qty": 1,
+     "total": 3350000,
+     "bought": 1,
+     "paid": 3350000,
+     "status": "Done"
+    },
+    {
+     "id": "m0475",
+     "name": "Rebar 16 mm",
+     "rate": 3350000,
+     "unit": "ton",
+     "date": "2026-02-21",
+     "qty": 2,
+     "total": 6700000,
+     "bought": 2,
+     "paid": 6700000,
+     "status": "Done"
+    },
+    {
+     "id": "m0476",
+     "name": "Rebar 16 mm",
+     "rate": 3330000,
+     "unit": "ton",
+     "date": "2026-06-11",
+     "qty": 3,
+     "total": 9990000,
+     "bought": 3,
+     "paid": 9990000,
+     "status": "Done"
+    },
+    {
+     "id": "m0477",
+     "name": "Rebar 16 mm",
+     "rate": 3500000,
+     "unit": "ton",
+     "date": "2026-07-10",
+     "qty": 1,
+     "total": 3500000,
+     "bought": 1,
+     "paid": 3500000,
+     "status": "Done"
+    },
+    {
+     "id": "m0478",
+     "name": "Rebar 12 mm",
+     "rate": 2980000,
+     "unit": "ton",
+     "date": "2026-07-16",
+     "qty": 1,
+     "total": 2980000,
+     "bought": 1,
+     "paid": 2980000,
+     "status": "Done"
+    },
+    {
+     "id": "m0479",
+     "name": "Rebar 10 mm",
+     "rate": 3730000,
+     "unit": "ton",
+     "date": "2026-07-16",
+     "qty": 0.5,
+     "total": 1878055,
+     "bought": 0.5,
+     "paid": 1878055,
+     "status": "Done"
+    },
+    {
+     "id": "m0480",
+     "name": "Rebar 20 mm",
+     "rate": 3350000,
+     "unit": "ton",
+     "date": "2026-02-21",
+     "qty": 2,
+     "total": 6700000,
+     "bought": 2,
+     "paid": 6700000,
+     "status": "Done"
+    },
+    {
+     "id": "m0481",
+     "name": "Stirrups first order",
+     "rate": 7350,
+     "unit": "Viss",
+     "date": "2026-05-06",
+     "qty": 213,
+     "total": 1580550,
+     "bought": 213,
+     "paid": 1580550,
+     "status": "Done"
+    },
+    {
+     "id": "m0482",
+     "name": "Stirrups second order",
+     "rate": 7350,
+     "unit": "Viss",
+     "date": "2026-05-14",
+     "qty": 212,
+     "total": 1613200,
+     "bought": 212,
+     "paid": 1613200,
+     "status": "Done"
+    },
+    {
+     "id": "m0483",
+     "name": "Stirrups third order",
+     "rate": 8050,
+     "unit": "Viss",
+     "date": "2026-02-21",
+     "qty": 82.5,
+     "total": 664125,
+     "bought": 82.5,
+     "paid": 664125,
+     "status": "Done"
+    },
+    {
+     "id": "m0484",
+     "name": "Stirrups fourth order",
+     "rate": 8800,
+     "unit": "Viss",
+     "date": "2026-06-30",
+     "qty": 160,
+     "total": 1433000,
+     "bought": 160,
+     "paid": 1433000,
+     "status": "Done"
+    },
+    {
+     "id": "m0485",
+     "name": "Stirrups fifth order",
+     "rate": 8550,
+     "unit": "Viss",
+     "date": "2026-07-04",
+     "qty": 249,
+     "total": 2153950,
+     "bought": 249,
+     "paid": 2153950,
+     "status": "Done"
+    },
+    {
+     "id": "m0486",
+     "name": "Stirrups sixth order",
+     "rate": 8550,
+     "unit": "Viss",
+     "date": "2026-07-17",
+     "qty": 102,
+     "total": 872100,
+     "bought": 102,
+     "paid": 872100,
+     "status": "Done"
+    },
+    {
+     "id": "m0487",
+     "name": "Stirrups seventh order",
+     "rate": 7800,
+     "unit": "Viss",
+     "date": "2026-07-17",
+     "qty": 30,
+     "total": 254000,
+     "bought": 30,
+     "paid": 254000,
+     "status": "Done"
+    },
+    {
+     "id": "m0488",
+     "name": "Binding wire 18g",
+     "rate": 126000,
+     "unit": "coil",
+     "date": "2026-02-21",
+     "qty": 6,
+     "total": 756000,
+     "bought": 6,
+     "paid": 756000,
+     "status": "Done"
+    },
+    {
+     "id": "m0489",
+     "name": "Binding wire 18g",
+     "rate": 72500,
+     "unit": "coil",
+     "date": "2026-07-05",
+     "qty": 2.8,
+     "total": 199375,
+     "bought": 2.8,
+     "paid": 199375,
+     "status": "Done"
+    },
+    {
+     "id": "m0490",
+     "name": "Nails 2ခွဲ (pack 1 viss)",
+     "rate": 11000,
+     "unit": "Viss",
+     "date": "2026-05-06",
+     "qty": 25,
+     "total": 275000,
+     "bought": 25,
+     "paid": 275000,
+     "status": "Done"
+    },
+    {
+     "id": "m0491",
+     "name": "Nails ၅မတ် (pack 1 viss)",
+     "rate": 14500,
+     "unit": "Viss",
+     "date": "2026-05-06",
+     "qty": 5,
+     "total": 72500,
+     "bought": 5,
+     "paid": 72500,
+     "status": "Done"
+    },
+    {
+     "id": "m0492",
+     "name": "SPC floor",
+     "rate": 800000,
+     "unit": "kyin",
+     "date": "2026-02-21",
+     "qty": 8,
+     "total": 6400000,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0493",
+     "name": "Stair tiles",
+     "rate": 16000,
+     "unit": "piece",
+     "date": "2026-09-25",
+     "qty": 53,
+     "total": 848000,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0494",
+     "name": "Bathroom wall tile (600x300 mm)",
+     "rate": 5600,
+     "unit": "piece",
+     "date": "2026-09-25",
+     "qty": 346,
+     "total": 1937600,
+     "bought": 200,
+     "paid": 1120000,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0495",
+     "name": "Bathroom floor tile (2ft x 2ft)",
+     "rate": 15800,
+     "unit": "piece",
+     "date": "2026-09-25",
+     "qty": 50,
+     "total": 790000,
+     "bought": 50,
+     "paid": 790000,
+     "status": "Done"
+    },
+    {
+     "id": "m0496",
+     "name": "Living Room Floor Tile (2ft x 2 ft)",
+     "rate": 15800,
+     "unit": "piece",
+     "date": "2026-09-25",
+     "qty": 96,
+     "total": 1516800,
+     "bought": 96,
+     "paid": 1516800,
+     "status": "Done"
+    },
+    {
+     "id": "m0497",
+     "name": "Morrcon Design Tile (2ft x 2 ft)",
+     "rate": 18300,
+     "unit": "piece",
+     "date": "2026-09-25",
+     "qty": 12,
+     "total": 219600,
+     "bought": 12,
+     "paid": 219600,
+     "status": "Done"
+    },
+    {
+     "id": "m0498",
+     "name": "Glass Railing (12'-1.5')",
+     "rate": 1224000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 1126080,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0499",
+     "name": "Glass Railing (3'-1.5')",
+     "rate": 306000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 281520,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0500",
+     "name": "Glass Railing (25'-1.5')",
+     "rate": 2550000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 2346000,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0501",
+     "name": "Glass Railing (9.5'-1.5')",
+     "rate": 969000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 2,
+     "total": 1782960,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0502",
+     "name": "Window W1",
+     "rate": 1375500,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 2,
+     "total": 2530920,
+     "bought": 0,
+     "paid": 2530920,
+     "status": "Done"
+    },
+    {
+     "id": "m0503",
+     "name": "Window W2 (2' x 5.5') casement",
+     "rate": 451000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 8,
+     "total": 3319360,
+     "bought": 0,
+     "paid": 3319360,
+     "status": "Done"
+    },
+    {
+     "id": "m0504",
+     "name": "Window W2* (2' x 5.5') Steel way",
+     "rate": 330000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 4,
+     "total": 1214400,
+     "bought": 0,
+     "paid": 689720,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0505",
+     "name": "Window W2** (2.4' x 5.5') Fix",
+     "rate": 343750,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 316250,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0506",
+     "name": "Window W3 (4.5' x 5.5') steel way",
+     "rate": 742500,
+     "unit": "unit",
+     "date": "2026-11-06",
+     "qty": 1,
+     "total": 683100,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0507",
+     "name": "Window W3* (4' x 5.5') steel way",
+     "rate": 660000,
+     "unit": "unit",
+     "date": "2026-11-06",
+     "qty": 2,
+     "total": 1214400,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0508",
+     "name": "Window W4* (4' x 2') awning",
+     "rate": 328000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 301760,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0509",
+     "name": "Window W4* (4' x 2') fix",
+     "rate": 200000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 5,
+     "total": 920000,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0510",
+     "name": "Window W5* (4' x 2') steel way",
+     "rate": 240000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 2,
+     "total": 441600,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0511",
+     "name": "Vent Glazing VG1 (2' x 2') awning",
+     "rate": 164000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 4,
+     "total": 603520,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0512",
+     "name": "Vent Glazing VG1 (2' x 2') overlapped",
+     "rate": 72000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 66240,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0513",
+     "name": "Mirror (2' x 7')",
+     "rate": 140000,
+     "unit": "unit",
+     "date": "2026-11-06",
+     "qty": 1,
+     "total": 128800,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0514",
+     "name": "D3 (2'5\" x 7' 6\") Back door",
+     "rate": 1031250,
+     "unit": "unit",
+     "date": "2026-11-06",
+     "qty": 1,
+     "total": 948750,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0515",
+     "name": "MD3 (4' x 7') Aluminum",
+     "rate": 1540000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 1416800,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0516",
+     "name": "D4 (2'10\" x 7\") Aluminum work room",
+     "rate": 808500,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 743820,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0517",
+     "name": "D2 (2'10\") uPVC",
+     "rate": 260000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 5,
+     "total": 1300000,
+     "bought": 2.3,
+     "paid": 600080,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0518",
+     "name": "D1(3'3\") - Teak",
+     "rate": 950000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 4,
+     "total": 3800000,
+     "bought": 0,
+     "paid": 3800000,
+     "status": "Done"
+    },
+    {
+     "id": "m0519",
+     "name": "MD1 - Teak",
+     "rate": 2175000,
+     "unit": "unit",
+     "date": "2026-03-29",
+     "qty": 1,
+     "total": 2175000,
+     "bought": 0,
+     "paid": 700000,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0520",
+     "name": "Exterior paint (10 l) N6052",
+     "rate": 346000,
+     "unit": "can",
+     "date": "2026-10-08",
+     "qty": 2,
+     "total": 692000,
+     "bought": 0,
+     "paid": 692000,
+     "status": "Done"
+    },
+    {
+     "id": "m0521",
+     "name": "Exterior paint (10 l) W9039",
+     "rate": 354500,
+     "unit": "can",
+     "date": "2026-10-08",
+     "qty": 2,
+     "total": 709000,
+     "bought": 0,
+     "paid": 709000,
+     "status": "Done"
+    },
+    {
+     "id": "m0522",
+     "name": "Interior paint (10 L) W9039",
+     "rate": 229000,
+     "unit": "can",
+     "date": "2026-10-08",
+     "qty": 8,
+     "total": 1832000,
+     "bought": 0,
+     "paid": 1832000,
+     "status": "Done"
+    },
+    {
+     "id": "m0523",
+     "name": "Interior paint (10 L) R2121",
+     "rate": 100000,
+     "unit": "can",
+     "date": "2026-10-08",
+     "qty": 1,
+     "total": 100000,
+     "bought": 0,
+     "paid": 100000,
+     "status": "Done"
+    },
+    {
+     "id": "m0524",
+     "name": "Sealer sheild 1 (20 L)",
+     "rate": 388000,
+     "unit": "can",
+     "date": "2026-10-08",
+     "qty": 2,
+     "total": 1371500,
+     "bought": 0,
+     "paid": 1371500,
+     "status": "Done"
+    },
+    {
+     "id": "m0525",
+     "name": "Sealer 4 season (20 L)",
+     "rate": 295000,
+     "unit": "can",
+     "date": "2026-10-08",
+     "qty": 2,
+     "total": 590000,
+     "bought": 0,
+     "paid": 590000,
+     "status": "Done"
+    },
+    {
+     "id": "m0526",
+     "name": "ပတ်တီး",
+     "rate": 28000,
+     "unit": "bag",
+     "date": "2026-10-08",
+     "qty": 25,
+     "total": 700000,
+     "bought": 0,
+     "paid": 700000,
+     "status": "Done"
+    },
+    {
+     "id": "m0527",
+     "name": "Rollers 9\"",
+     "rate": 8000,
+     "unit": "piece",
+     "date": "2026-10-08",
+     "qty": 5,
+     "total": 40000,
+     "bought": 0,
+     "paid": 40000,
+     "status": "Done"
+    },
+    {
+     "id": "m0528",
+     "name": "Rollers 4\"",
+     "rate": 4000,
+     "unit": "piece",
+     "date": "2026-10-08",
+     "qty": 5,
+     "total": 20000,
+     "bought": 0,
+     "paid": 20000,
+     "status": "Done"
+    },
+    {
+     "id": "m0529",
+     "name": "Rollers 7\"",
+     "rate": 6500,
+     "unit": "piece",
+     "date": "2026-10-08",
+     "qty": 5,
+     "total": 32500,
+     "bought": 0,
+     "paid": 32500,
+     "status": "Done"
+    },
+    {
+     "id": "m0530",
+     "name": "stone plate",
+     "rate": 25700,
+     "unit": "piece",
+     "date": "2026-10-28",
+     "qty": 90,
+     "total": 2325000,
+     "bought": 90,
+     "paid": 2325000,
+     "status": "Done"
+    },
+    {
+     "id": "m0531",
+     "name": "ecowoord",
+     "rate": 34000,
+     "unit": "piece",
+     "date": "2026-10-28",
+     "qty": 40,
+     "total": 1445000,
+     "bought": 40,
+     "paid": 1445000,
+     "status": "Done"
+    },
+    {
+     "id": "m0532",
+     "name": "biowood handrail",
+     "rate": 370000,
+     "unit": "piece",
+     "date": "2026-10-28",
+     "qty": 2,
+     "total": 740000,
+     "bought": 0,
+     "paid": 0,
+     "status": "Unpaid"
+    },
+    {
+     "id": "m0533",
+     "name": "Labour",
+     "rate": 29000,
+     "unit": "person",
+     "date": "2026-05-18",
+     "qty": 1737,
+     "total": 52313000,
+     "bought": 0,
+     "paid": 45385666,
+     "status": "In Progress"
+    },
+    {
+     "id": "m0534",
+     "name": "သစ်",
+     "rate": 3500000,
+     "unit": "ton",
+     "date": "2026-05-06",
+     "qty": 3.5,
+     "total": 12302500,
+     "bought": 3.5,
+     "paid": 12302500,
+     "status": "Done"
+    },
+    {
+     "id": "m0535",
+     "name": "9mm အထပ်သား",
+     "rate": 65000,
+     "unit": "piece",
+     "date": "2026-04-05",
+     "qty": 60,
+     "total": 3900000,
+     "bought": 60,
+     "paid": 3900000,
+     "status": "Done"
+    },
+    {
+     "id": "m0536",
+     "name": "False Work",
+     "rate": 120,
+     "unit": "piece",
+     "date": "2026-05-08",
+     "qty": 9000,
+     "total": 888000,
+     "bought": 120,
+     "paid": 888000,
+     "status": "Done"
+    }
+   ]
+  }
+ },
+ "labour": {
+  "2026-05": {
+   "label": "May 2026",
+   "meals": 1323667,
+   "workers": [
+    {
+     "id": "w0537",
+     "name": "ညိုတေး",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0538",
+     "name": "ဖိုးချစ်",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0539",
+     "name": "ဘိုဉာဏ်",
+     "days": 24,
+     "rate": 28000,
+     "paid": 672000,
+     "meal": 130000
+    },
+    {
+     "id": "w0540",
+     "name": "အတူး",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0541",
+     "name": "ဦးအောင်မင်း",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0542",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0543",
+     "name": "ဦးမင်းမင်း",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0544",
+     "name": "ဦးဇင်း",
+     "days": 24,
+     "rate": 23000,
+     "paid": 552000,
+     "meal": 130000
+    },
+    {
+     "id": "w0545",
+     "name": "စျာန်ထွန်း",
+     "days": 24,
+     "rate": 10000,
+     "paid": 240000,
+     "meal": 130000
+    }
+   ]
+  },
+  "2026-06": {
+   "label": "June 2026",
+   "meals": 1400000,
+   "workers": [
+    {
+     "id": "w0546",
+     "name": "ညိုတေး",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0547",
+     "name": "ဖိုးချစ်",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0548",
+     "name": "ဘိုဉာဏ်",
+     "days": 28,
+     "rate": 28000,
+     "paid": 784000,
+     "meal": 150000
+    },
+    {
+     "id": "w0549",
+     "name": "အတူး",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0550",
+     "name": "ဦးအောင်မင်း",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0551",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0552",
+     "name": "ဦးမင်းမင်း",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0553",
+     "name": "ဦးဇင်း",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 150000
+    },
+    {
+     "id": "w0554",
+     "name": "ဝါးစုကြည်",
+     "days": 10,
+     "rate": 15000,
+     "paid": 150000,
+     "meal": 50000
+    },
+    {
+     "id": "w0555",
+     "name": "စျာန်ထွန်း",
+     "days": 28,
+     "rate": 10000,
+     "paid": 280000,
+     "meal": 150000
+    }
+   ]
+  },
+  "2026-07": {
+   "label": "July 2026",
+   "meals": 1550000,
+   "workers": [
+    {
+     "id": "w0556",
+     "name": "ညိုတေး",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0557",
+     "name": "ဖိုးချစ်",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0558",
+     "name": "ဘိုဉာဏ်",
+     "days": 29,
+     "rate": 28000,
+     "paid": 812000,
+     "meal": 155000
+    },
+    {
+     "id": "w0559",
+     "name": "အတူး",
+     "days": 25,
+     "rate": 25000,
+     "paid": 625000,
+     "meal": 155000
+    },
+    {
+     "id": "w0560",
+     "name": "ဦးအောင်မင်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0561",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0562",
+     "name": "ဦးမင်းမင်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0563",
+     "name": "ဦးဇင်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0564",
+     "name": "ဝါးစုကြည်",
+     "days": 27,
+     "rate": 15000,
+     "paid": 405000,
+     "meal": 155000
+    },
+    {
+     "id": "w0565",
+     "name": "စျာန်ထွန်း",
+     "days": 25,
+     "rate": 10000,
+     "paid": 250000,
+     "meal": 155000
+    }
+   ]
+  },
+  "2026-08": {
+   "label": "August 2026",
+   "meals": 1930000,
+   "workers": [
+    {
+     "id": "w0566",
+     "name": "ညိုတေး",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 155000
+    },
+    {
+     "id": "w0567",
+     "name": "ဖိုးချစ်",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 155000
+    },
+    {
+     "id": "w0568",
+     "name": "ဘိုဉာဏ်",
+     "days": 28,
+     "rate": 28000,
+     "paid": 784000,
+     "meal": 155000
+    },
+    {
+     "id": "w0569",
+     "name": "အတူး",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 155000
+    },
+    {
+     "id": "w0570",
+     "name": "ဦးအောင်မင်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0571",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 155000
+    },
+    {
+     "id": "w0572",
+     "name": "ဦးမင်းမင်း",
+     "days": 28,
+     "rate": 25000,
+     "paid": 700000,
+     "meal": 155000
+    },
+    {
+     "id": "w0573",
+     "name": "ဦးဇင်း",
+     "days": 24,
+     "rate": 25000,
+     "paid": 600000,
+     "meal": 155000
+    },
+    {
+     "id": "w0574",
+     "name": "ဝါးစုကြည်",
+     "days": 28,
+     "rate": 15000,
+     "paid": 420000,
+     "meal": 155000
+    },
+    {
+     "id": "w0575",
+     "name": "စျာန်ထွန်း",
+     "days": 25,
+     "rate": 10000,
+     "paid": 250000,
+     "meal": 155000
+    }
+   ]
+  },
+  "2026-09": {
+   "label": "September 2026",
+   "meals": 1455000,
+   "workers": [
+    {
+     "id": "w0576",
+     "name": "ညိုတေး",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 150000
+    },
+    {
+     "id": "w0577",
+     "name": "ဖိုးချစ်",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 150000
+    },
+    {
+     "id": "w0578",
+     "name": "ဘိုဉာဏ်",
+     "days": 27.5,
+     "rate": 28000,
+     "paid": 770000,
+     "meal": 150000
+    },
+    {
+     "id": "w0579",
+     "name": "အတူး",
+     "days": 25,
+     "rate": 25000,
+     "paid": 625000,
+     "meal": 150000
+    },
+    {
+     "id": "w0580",
+     "name": "ဦးအောင်မင်း",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 150000
+    },
+    {
+     "id": "w0581",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 150000
+    },
+    {
+     "id": "w0582",
+     "name": "ဦးမင်းမင်း",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 150000
+    },
+    {
+     "id": "w0583",
+     "name": "ဦးဇင်း",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 150000
+    },
+    {
+     "id": "w0584",
+     "name": "ဝါးစုကြည်",
+     "days": 26,
+     "rate": 15000,
+     "paid": 390000,
+     "meal": 155000
+    },
+    {
+     "id": "w0585",
+     "name": "စျာန်ထွန်း",
+     "days": 14,
+     "rate": 10000,
+     "paid": 140000,
+     "meal": 100000
+    }
+   ]
+  },
+  "2026-10": {
+   "label": "October 2026",
+   "meals": 1035000,
+   "workers": [
+    {
+     "id": "w0586",
+     "name": "ညိုတေး",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0587",
+     "name": "ဖိုးချစ်",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 155000
+    },
+    {
+     "id": "w0588",
+     "name": "ဘိုဉာဏ်",
+     "days": 27,
+     "rate": 28000,
+     "paid": 756000,
+     "meal": 155000
+    },
+    {
+     "id": "w0589",
+     "name": "အတူး",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 155000
+    },
+    {
+     "id": "w0590",
+     "name": "ဦးအောင်မင်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0591",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0592",
+     "name": "ဦးမင်းမင်း",
+     "days": 26,
+     "rate": 25000,
+     "paid": 650000,
+     "meal": 155000
+    },
+    {
+     "id": "w0593",
+     "name": "ဦးဇင်း",
+     "days": 27,
+     "rate": 25000,
+     "paid": 675000,
+     "meal": 155000
+    },
+    {
+     "id": "w0594",
+     "name": "ဝါးစုကြည်",
+     "days": 24,
+     "rate": 15000,
+     "paid": 360000,
+     "meal": 155000
+    }
+   ]
+  },
+  "2026-11": {
+   "label": "November 2026",
+   "meals": 0,
+   "workers": [
+    {
+     "id": "w0595",
+     "name": "ညိုတေး",
+     "days": 16,
+     "rate": 25000,
+     "paid": 315000,
+     "meal": 155000
+    },
+    {
+     "id": "w0596",
+     "name": "ဖိုးချစ်",
+     "days": 16,
+     "rate": 25000,
+     "paid": 275000,
+     "meal": 155000
+    },
+    {
+     "id": "w0597",
+     "name": "ဘိုဉာဏ်",
+     "days": 28,
+     "rate": 28000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0598",
+     "name": "အတူး",
+     "days": 16,
+     "rate": 25000,
+     "paid": 85000,
+     "meal": 155000
+    },
+    {
+     "id": "w0599",
+     "name": "ဦးအောင်မင်း",
+     "days": 16,
+     "rate": 25000,
+     "paid": 55000,
+     "meal": 155000
+    },
+    {
+     "id": "w0600",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 0,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0601",
+     "name": "ဦးမင်းမင်း",
+     "days": 16,
+     "rate": 25000,
+     "paid": 195000,
+     "meal": 155000
+    },
+    {
+     "id": "w0602",
+     "name": "ဦးဇင်း",
+     "days": 16,
+     "rate": 25000,
+     "paid": 55000,
+     "meal": 155000
+    },
+    {
+     "id": "w0603",
+     "name": "ဝါးစုကြည်",
+     "days": 28,
+     "rate": 15000,
+     "paid": 0,
+     "meal": 155000
+    }
+   ]
+  },
+  "2026-12": {
+   "label": "December 2026",
+   "meals": 0,
+   "workers": [
+    {
+     "id": "w0604",
+     "name": "ညိုတေး",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0605",
+     "name": "ဖိုးချစ်",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0606",
+     "name": "ဘိုဉာဏ်",
+     "days": 29,
+     "rate": 28000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0607",
+     "name": "အတူး",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0608",
+     "name": "ဦးအောင်မင်း",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0609",
+     "name": "ဦးအောင်ထွန်း",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0610",
+     "name": "ဦးမင်းမင်း",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0611",
+     "name": "ဦးဇင်း",
+     "days": 29,
+     "rate": 25000,
+     "paid": 0,
+     "meal": 155000
+    },
+    {
+     "id": "w0612",
+     "name": "ဝါးစုကြည်",
+     "days": 29,
+     "rate": 15000,
+     "paid": 0,
+     "meal": 155000
+    }
+   ]
+  }
+ },
+ "savings": {
+  "all": {
+   "opening": 13000000,
+   "rows": [
+    {
+     "id": "s0613",
+     "month": "2025-06",
+     "cdg": 4785000,
+     "tf": 1375776,
+     "koko": 3000000,
+     "expense": 2000000,
+     "extraExp": 2189800,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0614",
+     "month": "2025-07",
+     "cdg": 4785000,
+     "tf": 1327872,
+     "koko": 3000000,
+     "expense": 2000000,
+     "extraExp": 1550000,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0615",
+     "month": "2025-08",
+     "cdg": 4625500,
+     "tf": 1323062,
+     "koko": 3000000,
+     "expense": 2000000,
+     "extraExp": 1500000,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0616",
+     "month": "2025-09",
+     "cdg": 4661750,
+     "tf": 1299288,
+     "koko": 3000000,
+     "expense": 2000000,
+     "extraExp": 2500000,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0617",
+     "month": "2025-10",
+     "cdg": 9500750,
+     "tf": 1248928,
+     "koko": 6000000,
+     "expense": 2000000,
+     "extraExp": 4500000,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0618",
+     "month": "2025-11",
+     "cdg": 4907920,
+     "tf": 1223136,
+     "koko": 3000000,
+     "expense": 2000000,
+     "extraExp": 1620000,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0619",
+     "month": "2025-12",
+     "cdg": 4881600,
+     "tf": 1248928,
+     "koko": 3000000,
+     "expense": 2000000,
+     "extraExp": 14883101,
+     "extra": 1418668,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0620",
+     "month": "2026-01",
+     "cdg": 4768000,
+     "tf": 391333,
+     "koko": 4000000,
+     "expense": 2000000,
+     "extraExp": 5369900,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0621",
+     "month": "2026-02",
+     "cdg": 4768000,
+     "tf": 2580000,
+     "koko": 25100000,
+     "expense": 2000000,
+     "extraExp": 2700000,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0622",
+     "month": "2026-03",
+     "cdg": 4960000,
+     "tf": 275000,
+     "koko": 14000000,
+     "expense": 2500000,
+     "extraExp": 56340000,
+     "extra": 249297,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0623",
+     "month": "2026-04",
+     "cdg": 4960000,
+     "tf": 475000,
+     "koko": 4000000,
+     "expense": 2500000,
+     "extraExp": 3136755,
+     "extra": 30000000,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0624",
+     "month": "2026-05",
+     "cdg": 4880000,
+     "tf": 0,
+     "koko": 10000000,
+     "expense": 2500000,
+     "extraExp": 32296650,
+     "extra": 0,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0625",
+     "month": "2026-06",
+     "cdg": 4944000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 35266660,
+     "extra": 15000000,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0626",
+     "month": "2026-07",
+     "cdg": 5040000,
+     "tf": 3710000,
+     "koko": 6100000,
+     "expense": 2500000,
+     "extraExp": 27530335,
+     "extra": 22000000,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0627",
+     "month": "2026-08",
+     "cdg": 5080000,
+     "tf": 950000,
+     "koko": 5000000,
+     "expense": 4500000,
+     "extraExp": 18764000,
+     "extra": 2490000,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0628",
+     "month": "2026-09",
+     "cdg": 5096000,
+     "tf": 200000,
+     "koko": 5000000,
+     "expense": 3000000,
+     "extraExp": 23770301,
+     "extra": 11300000,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0629",
+     "month": "2026-10",
+     "cdg": 5360000,
+     "tf": 0,
+     "koko": 13500000,
+     "expense": 2500000,
+     "extraExp": 38399700,
+     "extra": 12350000,
+     "sCdg": "received",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "received"
+    },
+    {
+     "id": "s0630",
+     "month": "2026-11",
+     "cdg": 6555000,
+     "tf": 7386450,
+     "koko": 12000000,
+     "expense": 2000000,
+     "extraExp": 13574000,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "received",
+     "sKoko": "received",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0631",
+     "month": "2026-12",
+     "cdg": 6080000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2000000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0632",
+     "month": "2027-01",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2000000,
+     "extraExp": 1000000,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0633",
+     "month": "2027-02",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0634",
+     "month": "2027-03",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 5000000,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0635",
+     "month": "2027-04",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0636",
+     "month": "2027-05",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0637",
+     "month": "2027-06",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0638",
+     "month": "2027-07",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0639",
+     "month": "2027-08",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0640",
+     "month": "2027-09",
+     "cdg": 5890000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 2500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0641",
+     "month": "2027-10",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0642",
+     "month": "2027-11",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0643",
+     "month": "2027-12",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0644",
+     "month": "2028-01",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0645",
+     "month": "2028-02",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0646",
+     "month": "2028-03",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0647",
+     "month": "2028-04",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0648",
+     "month": "2028-05",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0649",
+     "month": "2028-06",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    },
+    {
+     "id": "s0650",
+     "month": "2028-07",
+     "cdg": 6479000,
+     "tf": 0,
+     "koko": 5000000,
+     "expense": 3500000,
+     "extraExp": 0,
+     "extra": 0,
+     "sCdg": "pending",
+     "sTf": "pending",
+     "sKoko": "pending",
+     "sInt": "pending"
+    }
+   ]
+  }
+ },
+ "assets": {
+  "all": {
+   "items": [
+    {
+     "id": "a0651",
+     "name": "Kpay",
+     "amount": 167000
+    },
+    {
+     "id": "a0652",
+     "name": "Cash",
+     "amount": 45000
+    },
+    {
+     "id": "a0653",
+     "name": "Bathtub",
+     "amount": 0
+    },
+    {
+     "id": "a0654",
+     "name": "CB Bank",
+     "amount": 0
+    },
+    {
+     "id": "a0655",
+     "name": "UAB Bank",
+     "amount": 114000
+    },
+    {
+     "id": "a0656",
+     "name": "AYA Bank",
+     "amount": 0
+    },
+    {
+     "id": "a0657",
+     "name": "UAB Fixed Saving",
+     "amount": 0
+    },
+    {
+     "id": "a0658",
+     "name": "KoKo UAB",
+     "amount": 0
+    },
+    {
+     "id": "a0659",
+     "name": "KoKo",
+     "amount": 0
+    },
+    {
+     "id": "a0660",
+     "name": "Aunty Khine",
+     "amount": 0
+    },
+    {
+     "id": "a0661",
+     "name": "Mom",
+     "amount": 0
+    },
+    {
+     "id": "a0662",
+     "name": "Cycle",
+     "amount": 13000000
+    },
+    {
+     "id": "a0663",
+     "name": "Honda Fit",
+     "amount": 0
+    },
+    {
+     "id": "a0664",
+     "name": "Gold (my ring, koko's ring and earrings)",
+     "amount": 6653210
+    },
+    {
+     "id": "a0665",
+     "name": "Spa balance",
+     "amount": 0
+    },
+    {
+     "id": "a0666",
+     "name": "SDB tokens",
+     "amount": 0
+    },
+    {
+     "id": "a0667",
+     "name": "Bank Interest (12.12%)",
+     "amount": 0
+    }
+   ]
+  }
+ },
+ "rates": {
+  "all": {
+   "rows": [
+    {
+     "id": "r0668",
+     "month": "2025-06",
+     "sgd": 3300,
+     "thb": 136,
+     "thbPerSgd": 25.29
+    },
+    {
+     "id": "r0669",
+     "month": "2025-07",
+     "sgd": 3300,
+     "thb": 133,
+     "thbPerSgd": 24.96
+    },
+    {
+     "id": "r0670",
+     "month": "2025-08",
+     "sgd": 3190,
+     "thb": 132,
+     "thbPerSgd": 25.058
+    },
+    {
+     "id": "r0671",
+     "month": "2025-09",
+     "sgd": 3215,
+     "thb": 129,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0672",
+     "month": "2025-10",
+     "sgd": 3115,
+     "thb": 124,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0673",
+     "month": "2025-11",
+     "sgd": 3067.45,
+     "thb": 124,
+     "thbPerSgd": 24.66
+    },
+    {
+     "id": "r0674",
+     "month": "2025-12",
+     "sgd": 3051,
+     "thb": 124,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0675",
+     "month": "2026-01",
+     "sgd": 2980,
+     "thb": 125.79,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0676",
+     "month": "2026-02",
+     "sgd": 2980,
+     "thb": 127,
+     "thbPerSgd": 23.5
+    },
+    {
+     "id": "r0677",
+     "month": "2026-03",
+     "sgd": 3100,
+     "thb": 127,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0678",
+     "month": "2026-04",
+     "sgd": 3100,
+     "thb": 127,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0679",
+     "month": "2026-05",
+     "sgd": 3050,
+     "thb": 127,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0680",
+     "month": "2026-06",
+     "sgd": 3090,
+     "thb": 127,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0681",
+     "month": "2026-07",
+     "sgd": 3150,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0682",
+     "month": "2026-08",
+     "sgd": 3175,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0683",
+     "month": "2026-09",
+     "sgd": 3185,
+     "thb": 133,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0684",
+     "month": "2026-10",
+     "sgd": 3350,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0685",
+     "month": "2026-11",
+     "sgd": 3450,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0686",
+     "month": "2026-12",
+     "sgd": 3200,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0687",
+     "month": "2027-01",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0688",
+     "month": "2027-02",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0689",
+     "month": "2027-03",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0690",
+     "month": "2027-04",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0691",
+     "month": "2027-05",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0692",
+     "month": "2027-06",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0693",
+     "month": "2027-07",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0694",
+     "month": "2027-08",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0695",
+     "month": "2027-09",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0696",
+     "month": "2027-10",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0697",
+     "month": "2027-11",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0698",
+     "month": "2027-12",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0699",
+     "month": "2028-01",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0700",
+     "month": "2028-02",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0701",
+     "month": "2028-03",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0702",
+     "month": "2028-04",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0703",
+     "month": "2028-05",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    },
+    {
+     "id": "r0704",
+     "month": "2028-06",
+     "sgd": 3100,
+     "thb": 130,
+     "thbPerSgd": 25.18
+    }
+   ]
+  }
+ },
+ "trips": {
+  "phuket": {
+   "order": 1,
+   "name": "Phuket Trip",
+   "place": "Thailand",
+   "status": "Completed",
+   "pax": "2 people",
+   "rates": {
+    "THB": 132.5
+   },
+   "lines": [
+    {
+     "id": "t0705",
+     "name": "Heho - Ygn",
+     "cur": "MMK",
+     "price": 584000,
+     "qty": 2
+    },
+    {
+     "id": "t0706",
+     "name": "Ygn Hotel",
+     "cur": "MMK",
+     "price": 65000,
+     "qty": 2
+    },
+    {
+     "id": "t0707",
+     "name": "Ygn expense",
+     "cur": "MMK",
+     "price": 50000,
+     "qty": 2
+    },
+    {
+     "id": "t0708",
+     "name": "Flight tickets",
+     "cur": "THB",
+     "price": 8765,
+     "qty": 2
+    },
+    {
+     "id": "t0709",
+     "name": "Room",
+     "cur": "THB",
+     "price": 4563,
+     "qty": 2
+    },
+    {
+     "id": "t0710",
+     "name": "Island tour + SIAM Park + Water Sports",
+     "cur": "THB",
+     "price": 6548,
+     "qty": 2
+    },
+    {
+     "id": "t0711",
+     "name": "Food (Phuket 600 + Bkk 2000)",
+     "cur": "THB",
+     "price": 2600,
+     "qty": 2
+    },
+    {
+     "id": "t0712",
+     "name": "Drinks n club (Phuket 1000 + Bkk 2000)",
+     "cur": "THB",
+     "price": 3000,
+     "qty": 2
+    },
+    {
+     "id": "t0713",
+     "name": "SIAM + S2O",
+     "cur": "THB",
+     "price": 6500,
+     "qty": 2
+    },
+    {
+     "id": "t0714",
+     "name": "Transportation",
+     "cur": "THB",
+     "price": 2500,
+     "qty": 2
+    },
+    {
+     "id": "t0715",
+     "name": "Shopping",
+     "cur": "THB",
+     "price": 3000,
+     "qty": 2
+    }
+   ]
+  },
+  "weeknd": {
+   "order": 2,
+   "name": "The Weeknd After Hours Tour",
+   "place": "Singapore",
+   "status": "Completed",
+   "pax": "2 people",
+   "rates": {
+    "SGD": 3650
+   },
+   "lines": [
+    {
+     "id": "t0716",
+     "name": "Tour tix",
+     "cur": "SGD",
+     "price": 267.65,
+     "qty": 2
+    },
+    {
+     "id": "t0717",
+     "name": "Flight",
+     "cur": "SGD",
+     "price": 390,
+     "qty": 2
+    },
+    {
+     "id": "t0718",
+     "name": "Hotel",
+     "cur": "SGD",
+     "price": 152.06,
+     "qty": 4
+    },
+    {
+     "id": "t0719",
+     "name": "Expenses (for 2 pax)",
+     "cur": "MMK",
+     "price": 1992325,
+     "qty": 1
+    },
+    {
+     "id": "t0720",
+     "name": "Ygn hotel",
+     "cur": "MMK",
+     "price": 219000,
+     "qty": 1
+    },
+    {
+     "id": "t0721",
+     "name": "Mdy-Ygn (VIP Marcopolo)",
+     "cur": "MMK",
+     "price": 108000,
+     "qty": 2
+    },
+    {
+     "id": "t0722",
+     "name": "YGN expense",
+     "cur": "MMK",
+     "price": 100000,
+     "qty": 1
+    }
+   ]
+  },
+  "bali": {
+   "order": 3,
+   "name": "Bali Trip",
+   "place": "Indonesia",
+   "status": "",
+   "pax": "1 person",
+   "rates": {
+    "USD": 4724.113856068743
+   },
+   "lines": [
+    {
+     "id": "t0723",
+     "name": "Flight tickets (ygn-sg-bali-surabaya-ygn)",
+     "cur": "USD",
+     "price": 315,
+     "qty": 1
+    },
+    {
+     "id": "t0724",
+     "name": "Accommodation",
+     "cur": "USD",
+     "price": 251,
+     "qty": 1
+    },
+    {
+     "id": "t0725",
+     "name": "Meals and activities",
+     "cur": "USD",
+     "price": 250,
+     "qty": 1
+    },
+    {
+     "id": "t0726",
+     "name": "Transportation",
+     "cur": "USD",
+     "price": 97,
+     "qty": 1
+    },
+    {
+     "id": "t0727",
+     "name": "Spa",
+     "cur": "USD",
+     "price": 18,
+     "qty": 1
+    }
+   ]
+  },
+  "kawthaung": {
+   "order": 4,
+   "name": "Kawthaung Trip",
+   "place": "Myanmar",
+   "status": "Pending",
+   "pax": "2 people",
+   "rates": {},
+   "lines": [
+    {
+     "id": "t0728",
+     "name": "Flight tickets (round trip)",
+     "cur": "MMK",
+     "price": 2213649,
+     "qty": 2
+    },
+    {
+     "id": "t0729",
+     "name": "Awei Pila",
+     "cur": "MMK",
+     "price": 2250000,
+     "qty": 2
+    },
+    {
+     "id": "t0730",
+     "name": "Kalaw-Yg",
+     "cur": "MMK",
+     "price": 1160087,
+     "qty": 2
+    },
+    {
+     "id": "t0731",
+     "name": "Ygn Hotel (4N)",
+     "cur": "MMK",
+     "price": 140000,
+     "qty": 2
+    },
+    {
+     "id": "t0732",
+     "name": "Ygn expense",
+     "cur": "MMK",
+     "price": 200000,
+     "qty": 2
+    },
+    {
+     "id": "t0733",
+     "name": "Dive",
+     "cur": "MMK",
+     "price": 550000,
+     "qty": 2
+    }
+   ]
+  },
+  "eastjava": {
+   "order": 5,
+   "name": "East Java and Singapore Trip",
+   "place": "Indonesia + Singapore",
+   "status": "Pending",
+   "pax": "1 traveller",
+   "rates": {
+    "THB": 127
+   },
+   "lines": [
+    {
+     "id": "t0734",
+     "name": "Flight tickets (ygn-sg-bali-surabaya-KLP-ygn)",
+     "cur": "THB",
+     "price": 16705,
+     "qty": 1
+    },
+    {
+     "id": "t0735",
+     "name": "Singapore accommodation",
+     "cur": "THB",
+     "price": 2500,
+     "qty": 3
+    },
+    {
+     "id": "t0736",
+     "name": "Singapore meals, transportation and activities",
+     "cur": "THB",
+     "price": 2000,
+     "qty": 3
+    },
+    {
+     "id": "t0737",
+     "name": "Java accommodation",
+     "cur": "THB",
+     "price": 650,
+     "qty": 2
+    },
+    {
+     "id": "t0738",
+     "name": "Java accommodation",
+     "cur": "THB",
+     "price": 16900,
+     "qty": 1
+    },
+    {
+     "id": "t0739",
+     "name": "Java meals and transportation",
+     "cur": "THB",
+     "price": 800,
+     "qty": 7
+    },
+    {
+     "id": "t0740",
+     "name": "Spa and souvenirs",
+     "cur": "THB",
+     "price": 5000,
+     "qty": 1
+    }
+   ]
+  }
+ },
+ "dp": {
+  "settings": {
+   "repayPerMonth": 4000000,
+   "loanTargetMonth": "2027-01",
+   "snapshot": "2026-11-14"
+  }
+ }
+}
