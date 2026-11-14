@@ -1,3 +1,4 @@
+import { CsvLinks } from "@/components/CsvLinks";
 import { addLoanTransfer, updateField } from "@/app/actions";
 import { MonthPills } from "@/components/MonthPills";
 import { Page } from "@/components/Page";
@@ -35,6 +36,7 @@ export default async function ExpensesPage({ searchParams }: { searchParams: Pro
 
   return (
     <Page eyebrow="Home" title="Expenses" lede="Spending on the build, month by month. Add as you go; the board follows.">
+      <CsvLinks tables={[{ key: "expenses", label: "expenses" }, { key: "loans", label: "family loan" }]} />
       <QuickAdd today={todayISO()} lineOptions={lineOptions} />
 
       <section className={styles.section}>

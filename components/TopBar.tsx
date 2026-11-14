@@ -1,3 +1,4 @@
+import { Logout } from "./Logout";
 import { SaveChip } from "./SaveChip";
 import { Tabs } from "./Tabs";
 import styles from "./TopBar.module.css";
@@ -8,7 +9,10 @@ export function TopBar() {
       <div className={styles.inner}>
         <div className={styles.brand}>
           <b>Dream Planner ♡</b>
-          <SaveChip />
+          <span className={styles.right}>
+            <SaveChip />
+            <Logout />
+          </span>
         </div>
         <Tabs />
       </div>

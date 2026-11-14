@@ -1,3 +1,4 @@
+import { CsvLinks } from "@/components/CsvLinks";
 import { addWorker, startNextLabourMonth, updateField } from "@/app/actions";
 import { MonthPills } from "@/components/MonthPills";
 import { Page } from "@/components/Page";
@@ -21,6 +22,7 @@ export default async function LabourPage({ searchParams }: { searchParams: Promi
   const entries = month ? rows.labourEntries.filter((e) => e.monthId === month.id) : [];
   return (
     <Page eyebrow="Home" title="Labour" lede="Workers per month. Wage is days times the daily rate; due is wage minus paid.">
+      <CsvLinks tables={[{ key: "labour", label: "labour" }]} />
       <SumRow
         items={[
           { value: kyat(all.wages), label: "Wages, all months" },

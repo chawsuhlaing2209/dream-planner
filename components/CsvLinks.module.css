@@ -1,0 +1,14 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 0.86rem;
+}
+.links a {
+  color: var(--muted);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+.links a:hover {
+  color: var(--ink);
+}

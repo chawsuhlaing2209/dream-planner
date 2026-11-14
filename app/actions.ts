@@ -7,6 +7,7 @@ import { z } from "zod";
 import { periodOf } from "@/lib/calc/expenses";
 import { suggestedTotal } from "@/lib/calc/materials";
 import { DELETABLE, parseField, type ActionResult } from "@/lib/actions/fields";
+import { hasSession } from "@/lib/auth/server";
 import { db, ensureForeignKeys } from "@/lib/db";
 import * as t from "@/lib/db/schema";
 import { CURRENCIES } from "@/lib/db/schema";
@@ -27,6 +28,8 @@ const TABLES = {
   settings: t.settings,
 } as const;
 type TableName = keyof typeof TABLES;
+
+const DENIED: ActionResult = { ok: false, error: "You are logged out. Reload the page and enter the passcode." };
 
 const newId = (prefix: string) => `${prefix}${crypto.randomUUID().replace(/-/g, "").slice(0, 12)}`;
 
@@ -52,6 +55,7 @@ async function nextSort(column: SQLiteColumn, where?: ReturnType<typeof eq>): Pr
 
 /** Saves one edited cell. Validated against lib/actions/fields. */
 export async function updateField(table: string, id: string, field: string, value: unknown): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   const parsed = parseField(table, field, value);
   if (!parsed.ok) return parsed;
   if (typeof id !== "string" || !id) return { ok: false, error: "Missing row." };
@@ -81,6 +85,7 @@ export async function updateField(table: string, id: string, field: string, valu
 
 /** Deletes one row. Child rows cascade (trip lines, trip rates). */
 export async function deleteRow(table: string, id: string): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   if (!(DELETABLE as readonly string[]).includes(table)) return { ok: false, error: "This row cannot be deleted." };
   try {
     await ensureForeignKeys();
@@ -95,6 +100,7 @@ export async function deleteRow(table: string, id: string): Promise<ActionResult
 /* ---------- Home budget ---------- */
 
 export async function addBudgetLine(categoryId: string): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const [cat] = await db.select().from(t.budgetCategories).where(eq(t.budgetCategories.id, categoryId));
     if (!cat) return { ok: false, error: "That category no longer exists." };
@@ -124,6 +130,7 @@ export type QuickAddInput = z.infer<typeof QuickAdd>;
 
 /** Adds an expense; if asked, adds the same amount to the budget line's paid, in one transaction. */
 export async function addExpense(input: QuickAddInput): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   const p = QuickAdd.safeParse(input);
   if (!p.success) return { ok: false, error: p.error.issues[0]?.message ?? "Check the form." };
   const v = p.data;
@@ -157,6 +164,7 @@ export async function addExpense(input: QuickAddInput): Promise<ActionResult> {
 }
 
 export async function addLoanTransfer(): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const sort = await nextSort(t.loanTransfers.sort);
     await db.insert(t.loanTransfers).values({ id: newId("l"), date: todayISO(), fromWhom: "", amount: 0, intoAccount: "", sort });
@@ -169,6 +177,7 @@ export async function addLoanTransfer(): Promise<ActionResult> {
 /* ---------- Materials ---------- */
 
 export async function addMaterial(): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const sort = await nextSort(t.materials.sort);
     await db.insert(t.materials).values({ id: newId("m"), name: "", date: todayISO(), status: "Unpaid", sort });
@@ -181,6 +190,7 @@ export async function addMaterial(): Promise<ActionResult> {
 /* ---------- Labour ---------- */
 
 export async function addWorker(monthId: string): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     await ensureForeignKeys();
     const sort = await nextSort(t.labourEntries.sort, eq(t.labourEntries.monthId, monthId));
@@ -193,6 +203,7 @@ export async function addWorker(monthId: string): Promise<ActionResult> {
 
 /** Copies the last month's workers into the next month with days 0 and paid 0. */
 export async function startNextLabourMonth(): Promise<ActionResult & { period?: string }> {
+  if (!(await hasSession())) return DENIED;
   try {
     await ensureForeignKeys();
     const [last] = await db.select().from(t.labourMonths).orderBy(desc(t.labourMonths.period)).limit(1);
@@ -225,6 +236,7 @@ export async function startNextLabourMonth(): Promise<ActionResult & { period?: 
 /* ---------- Trips ---------- */
 
 export async function addTrip(): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const sort = await nextSort(t.trips.sort);
     await db.insert(t.trips).values({ id: newId("trip"), name: "New trip", place: "", who: "", status: "Pending", sort });
@@ -235,6 +247,7 @@ export async function addTrip(): Promise<ActionResult> {
 }
 
 export async function addTripLine(tripId: string): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     await ensureForeignKeys();
     const sort = await nextSort(t.tripLines.sort, eq(t.tripLines.tripId, tripId));
@@ -253,6 +266,7 @@ const Rate = z.object({
 
 /** Sets "K per 1 XXX" for one trip. */
 export async function setTripRate(tripId: string, currency: string, value: unknown): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   const p = Rate.safeParse({ tripId, currency, value });
   if (!p.success) return { ok: false, error: p.error.issues[0]?.message ?? "Not a valid rate." };
   try {
@@ -277,6 +291,7 @@ export async function setTripRate(tripId: string, currency: string, value: unkno
 
 /** Adds the month after the last row, copying CDG salary, KoKo's saving and Expense; flags pending. */
 export async function addSavingsMonth(): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const [last] = await db.select().from(t.savingsMonths).orderBy(desc(t.savingsMonths.month)).limit(1);
     await db.insert(t.savingsMonths).values({
@@ -293,6 +308,7 @@ export async function addSavingsMonth(): Promise<ActionResult> {
 }
 
 export async function addHolding(): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const sort = await nextSort(t.holdings.sort);
     await db.insert(t.holdings).values({ id: newId("a"), name: "", amount: 0, sort });
@@ -304,6 +320,7 @@ export async function addHolding(): Promise<ActionResult> {
 
 /** Adds the month after the last rate note, copying its rates as a starting point. */
 export async function addFxNote(): Promise<ActionResult> {
+  if (!(await hasSession())) return DENIED;
   try {
     const [last] = await db.select().from(t.fxNotes).orderBy(desc(t.fxNotes.month)).limit(1);
     await db.insert(t.fxNotes).values({

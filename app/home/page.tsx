@@ -1,3 +1,4 @@
+import { CsvLinks } from "@/components/CsvLinks";
 import { addBudgetLine } from "@/app/actions";
 import { Page } from "@/components/Page";
 import { ProgressBar } from "@/components/ProgressBar";
@@ -15,6 +16,7 @@ export default async function HomeBudgetPage() {
   const cats = categoryTotals(rows.budgetCategories, rows.budgetLines);
   return (
     <Page eyebrow="Home" title="Home budget" lede="Every budget line, room by room. Left to pay is the estimate minus what is paid.">
+      <CsvLinks tables={[{ key: "budget", label: "home budget" }]} />
       <SumRow
         items={[
           { value: kyat(home.estimate), label: "Estimated total" },

@@ -1,3 +1,4 @@
+import { CsvLinks } from "@/components/CsvLinks";
 import { addTrip, addTripLine, setTripRate, updateField } from "@/app/actions";
 import { Page } from "@/components/Page";
 import { Stamp } from "@/components/Stamp";
@@ -21,6 +22,7 @@ export default async function TripsPage() {
       title="Trips"
       lede="One card per trip. Lines can be in kyat, baht, US or Singapore dollars. Set the rate and the kyat total follows."
     >
+      <CsvLinks tables={[{ key: "trips", label: "trips" }]} />
       <div className={styles.row}>
         <AddButton label="Add a trip" action={addTrip} />
       </div>

@@ -1,3 +1,4 @@
+import { CsvLinks } from "@/components/CsvLinks";
 import { addMaterial } from "@/app/actions";
 import { Page } from "@/components/Page";
 import { SumRow } from "@/components/SumRow";
@@ -17,6 +18,7 @@ export default async function MaterialsPage() {
       title="Materials"
       lede="Every purchase with its quantity and price. Left is the total minus what is paid."
     >
+      <CsvLinks tables={[{ key: "materials", label: "materials" }]} />
       <SumRow
         items={[
           { value: kyat(t.totalCost), label: "Total cost" },

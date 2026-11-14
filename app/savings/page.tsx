@@ -1,3 +1,4 @@
+import { CsvLinks } from "@/components/CsvLinks";
 import { addFxNote, addHolding, addSavingsMonth, updateField } from "@/app/actions";
 import { SavingsChart, SavingsLegend } from "@/components/board/SavingsChart";
 import { Card } from "@/components/Card";
@@ -22,6 +23,7 @@ export default async function SavingsPage() {
       title="Savings"
       lede="Each month: income in, living costs and extra spending out. The running total carries forward."
     >
+      <CsvLinks tables={[{ key: "savings", label: "savings" }, { key: "holdings", label: "holdings" }, { key: "rates", label: "exchange rates" }]} />
       <Card>
         <SavingsChart series={series} buildMonths={monthSpend(rows.expenses).map((s) => s.period)} />
         <SavingsLegend />
