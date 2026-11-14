@@ -1,2 +1,6 @@
-console.error("Not built yet: arrives in phase 1.");
-process.exit(1);
+import { db, databaseUrl } from "../lib/db";
+import { checkDatabase } from "./check";
+
+console.log(`Checking ${databaseUrl} against data/expected-totals.json\n`);
+const ok = await checkDatabase(db);
+process.exit(ok ? 0 : 1);
