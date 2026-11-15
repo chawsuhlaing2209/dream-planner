@@ -89,6 +89,23 @@ export async function deleteRow(table: string, id: string): Promise<ActionResult
   if (!(DELETABLE as readonly string[]).includes(table)) return { ok: false, error: "This row cannot be deleted." };
   try {
     await ensureForeignKeys();
+    // Clean up child rows here instead of relying on the database's foreign-key settings,
+    // which a hosted database may not enforce the same way as the local file.
+    if (table === "trips") {
+      await db.transaction(async (tx) => {
+        await tx.delete(t.tripLines).where(eq(t.tripLines.tripId, id));
+        await tx.delete(t.tripRates).where(eq(t.tripRates.tripId, id));
+        await tx.delete(t.trips).where(eq(t.trips.id, id));
+      });
+      return done();
+    }
+    if (table === "budgetLines") {
+      await db.transaction(async (tx) => {
+        await tx.update(t.expenses).set({ budgetLineId: null }).where(eq(t.expenses.budgetLineId, id));
+        await tx.delete(t.budgetLines).where(eq(t.budgetLines.id, id));
+      });
+      return done();
+    }
     const tbl = TABLES[table as TableName];
     await db.delete(tbl).where(eq(tbl.id, id));
     return done();

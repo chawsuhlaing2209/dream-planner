@@ -13,6 +13,19 @@ A private family tracker for the house build, trips and savings. It replaces the
 
 `npm run db:seed` refuses to run when the database already has data. `--force` wipes the family's edits, so only use it on purpose.
 
+## Hosting (Vercel + Turso)
+
+| Setting in Vercel | Value |
+|---|---|
+| `DATABASE_URL` | `libsql://<db>-<org>.turso.io` |
+| `DATABASE_AUTH_TOKEN` | Turso database token |
+| `APP_PASSCODE` | The family passcode |
+| `SESSION_SECRET` | 32+ random characters (command in `.env.example`) |
+
+Load the data once from a laptop with the same two database settings: `npm run db:migrate`, `npm run db:seed`, `npm run verify:data`.
+
+The wrong-passcode limit is kept in memory, so on Vercel it is per server instance: a light brake, not a lock.
+
 ## Checks
 
 `npm run typecheck`, `npm run lint`, `npm test`, `npm run verify:data`. See `.claude/skills/verify`.
